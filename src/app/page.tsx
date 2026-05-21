@@ -473,61 +473,61 @@ export default function ClientLMSDashboard() {
           
           <button
             onClick={() => setActiveTab("training")}
-            className={`py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 ${
+            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 shadow-sm border ${
               activeTab === "training"
-                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white glow-pink shadow-lg scale-[1.02]"
-                : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
+                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
+                : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
             }`}
           >
-            <Calendar className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            <Calendar className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "training" ? "text-white" : "text-neon-pink/70 group-hover:text-neon-pink"}`} />
             <span>{t("tabPlanner")}</span>
           </button>
 
           <button
             onClick={() => setActiveTab("ai")}
-            className={`py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 ${
+            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 shadow-sm border ${
               activeTab === "ai"
-                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white glow-pink shadow-lg scale-[1.02]"
-                : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
+                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
+                : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
             }`}
           >
-            <Video className="w-5 h-5 sm:w-5.5 sm:h-5.5 animate-float" />
+            <Video className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "ai" ? "text-white" : "text-neon-cyan/70 group-hover:text-neon-cyan animate-pulse"}`} />
             <span>{t("tabFeedback")}</span>
           </button>
 
           <button
             onClick={() => setActiveTab("curriculum")}
-            className={`py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 col-span-2 md:col-span-1 ${
+            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 col-span-2 md:col-span-1 shadow-sm border ${
               activeTab === "curriculum"
-                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white glow-pink shadow-lg scale-[1.02]"
-                : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
+                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
+                : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
             }`}
           >
-            <BookOpen className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            <BookOpen className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "curriculum" ? "text-white" : "text-[#CFA764]/70 group-hover:text-[#CFA764]"}`} />
             <span>{t("tabRoadmap")}</span>
           </button>
 
           <button
             onClick={() => setActiveTab("network")}
-            className={`py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 ${
+            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 shadow-sm border ${
               activeTab === "network"
-                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white glow-pink shadow-lg scale-[1.02]"
-                : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
+                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
+                : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
             }`}
           >
-            <MessageSquare className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            <MessageSquare className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "network" ? "text-white" : "text-neon-purple/70 group-hover:text-neon-purple"}`} />
             <span>{t("tabNetwork")}</span>
           </button>
 
           <button
             onClick={() => setActiveTab("portfolio")}
-            className={`py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 ${
+            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 shadow-sm border ${
               activeTab === "portfolio"
-                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white glow-pink shadow-lg scale-[1.02]"
-                : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
+                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
+                : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
             }`}
           >
-            <Award className="w-5 h-5 sm:w-5.5 sm:h-5.5" />
+            <Award className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "portfolio" ? "text-white" : "text-amber-400/70 group-hover:text-amber-400"}`} />
             <span>{t("tabPortfolio")}</span>
           </button>
 
