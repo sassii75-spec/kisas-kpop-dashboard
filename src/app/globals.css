@@ -1,0 +1,122 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+@import "tailwindcss";
+
+:root {
+  --background: #0b0d12;
+  --foreground: #f8fafc;
+  
+  --color-neon-pink: #CFA764;
+  --color-neon-purple: #C8AB7B;
+  --color-neon-cyan: #E6C897;
+}
+
+@theme {
+  --font-sans: "Pretendard", "Pretendard JP", var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --color-neon-pink: #CFA764;
+  --color-neon-purple: #C8AB7B;
+  --color-neon-cyan: #E6C897;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 커스텀 유틸리티 및 프리미엄 효과 */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glassmorphism-card {
+  background: rgba(22, 25, 35, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(207, 167, 100, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(207, 167, 100, 0.25);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(200, 171, 123, 0.25);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(230, 200, 151, 0.25);
+}
+
+.glow-text-pink {
+  text-shadow: 0 0 10px rgba(207, 167, 100, 0.45);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 10px rgba(230, 200, 151, 0.45);
+}
+
+/* 애니메이션 */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(-45deg, #CFA764, #C8AB7B, #E6C897, #C8AB7B, #CFA764);
+  background-size: 400% 400%;
+  animation: shimmer 15s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.5s infinite ease-in-out;
+}
+
+/* 프린트 스타일링 (이력서 및 디지털 프로필 최적화) */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #020617 !important;
+    font-size: 12px;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-card {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #020617 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    page-break-inside: avoid;
+  }
+  .print-text {
+    color: #020617 !important;
+    text-shadow: none !important;
+  }
+}
+
