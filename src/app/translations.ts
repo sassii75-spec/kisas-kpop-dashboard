@@ -82,12 +82,20 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Pencapaian Hari Ini"
   },
   hudAudition: {
-    KOR: "데뷔 오디션",
-    ENG: "Debut Audition",
-    JPN: "デビューオーディション",
-    CHN: "出道选秀",
-    VIE: "Buổi thử giọng ra mắt",
-    IDN: "Audisi Debut"
+    KOR: "캠프 참여기간",
+    ENG: "Camp Duration",
+    JPN: "キャンプ参加期間",
+    CHN: "训练营参与期",
+    VIE: "Thời gian tham gia trại",
+    IDN: "Periode Partisipasi Kamp"
+  },
+  hudCampDay: {
+    KOR: "3일차",
+    ENG: "Day 3",
+    JPN: "3日目",
+    CHN: "第3天",
+    VIE: "Ngày 3",
+    IDN: "Hari Ke-3"
   },
   tabPlanner: {
     KOR: "나의 훈련 플래너",

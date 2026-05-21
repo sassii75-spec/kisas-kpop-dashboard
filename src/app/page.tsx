@@ -443,24 +443,24 @@ export default function ClientLMSDashboard() {
                 <h2 className="text-2xl sm:text-3xl font-black text-slate-100">{t("traineeName")}</h2>
                 <span className="text-xs sm:text-sm bg-neon-pink/15 text-neon-pink px-3 py-1 rounded border border-neon-pink/20 font-black uppercase tracking-wider">{t("traineeClass")}</span>
               </div>
-              <p className="text-sm sm:text-base md:text-lg text-slate-400 font-semibold mt-2.5">{t("traineeTrack")}</p>
+              <p className="text-xs sm:text-sm md:text-base text-slate-400 font-semibold mt-2.5 lg:whitespace-nowrap">{t("traineeTrack")}</p>
             </div>
           </div>
 
           {/* Core Trainee Stats */}
-          <div className="grid grid-cols-3 gap-6 sm:gap-10 w-full lg:w-auto text-center divide-x divide-slate-850">
-            <div className="px-4">
-              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2">{t("hudHours")}</span>
-              <strong className="text-xl sm:text-2xl md:text-3xl font-black text-neon-pink">{t("hudHoursValue")}</strong>
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 w-full lg:w-auto text-center divide-x divide-slate-850">
+            <div className="px-2 sm:px-4">
+              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2 whitespace-nowrap">{t("hudHours")}</span>
+              <strong className="text-lg sm:text-xl md:text-2xl font-black text-neon-pink whitespace-nowrap">{t("hudHoursValue")}</strong>
             </div>
-            <div className="px-4">
-              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2">{t("hudHomework")}</span>
-              <strong className="text-xl sm:text-2xl md:text-3xl font-black text-neon-cyan">{progressPercent}%</strong>
+            <div className="px-2 sm:px-4">
+              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2 whitespace-nowrap">{t("hudHomework")}</span>
+              <strong className="text-lg sm:text-xl md:text-2xl font-black text-neon-cyan whitespace-nowrap">{progressPercent}%</strong>
             </div>
-            <div className="px-4">
-              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2">{t("hudAudition")}</span>
-              <strong className="text-xl sm:text-2xl md:text-3xl font-black text-white flex items-center justify-center gap-2">
-                D-7 <span className="w-3 h-3 rounded-full bg-neon-pink animate-ping" />
+            <div className="px-2 sm:px-4">
+              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2 whitespace-nowrap">{t("hudAudition")}</span>
+              <strong className="text-lg sm:text-xl md:text-2xl font-black text-white flex items-center justify-center gap-2 whitespace-nowrap">
+                {t("hudCampDay")} <span className="w-3 h-3 rounded-full bg-neon-pink animate-ping" />
               </strong>
             </div>
           </div>
