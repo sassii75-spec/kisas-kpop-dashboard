@@ -18,12 +18,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Kamp K-Pop AI"
   },
   headerTitle: {
-    KOR: "세계 최초 AI 기반 K-pop Creator Camp 글로벌 K-Pop 인재 인큐베이팅 플랫폼",
-    ENG: "World's First AI-Based K-pop Creator Camp Global K-Pop Talent Incubating Platform",
-    JPN: "世界初AI基盤K-pop Creator Camp グローバルK-Pop人材インキュベーティングプラットフォーム",
-    CHN: "世界首创基于AI的K-pop Creator Camp 全球K-Pop人才孵化平台",
-    VIE: "Nền tảng Ươm mầm Tài năng K-Pop Toàn cầu Trại sáng tạo K-Pop dựa trên AI đầu tiên trên thế giới",
-    IDN: "Platform Inkubasi Talenta K-Pop Global Kamp Kreator K-Pop Berbasis AI Pertama di Dunia"
+    KOR: "KISAS 2026 Summer 캠프",
+    ENG: "KISAS 2026 Summer Camp",
+    JPN: "KISAS 2026 Summer キャンプ",
+    CHN: "KISAS 2026 Summer 训练营",
+    VIE: "Trại hè KISAS 2026",
+    IDN: "Kamp Musim Panas KISAS 2026"
   },
   statusNetwork: {
     KOR: "캠프 연계 온라인 사후 학습망 가동 중",

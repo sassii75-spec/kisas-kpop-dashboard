@@ -357,13 +357,7 @@ export default function ClientLMSDashboard() {
               </h1>
             </div>
           </div>
-          
           <div className="flex items-center gap-4">
-            <div className="hidden lg:flex items-center gap-2.5 bg-slate-900/60 border border-slate-800/80 px-5 py-2.5 rounded-xl text-sm font-semibold">
-              <Wifi className="w-4.5 h-4.5 text-neon-cyan animate-pulse" />
-              <span className="text-slate-350">{t("statusNetwork")}</span>
-            </div>
-
             {/* Language Selector Dropdown */}
             <div className="relative">
               <button
