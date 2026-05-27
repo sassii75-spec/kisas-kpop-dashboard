@@ -422,14 +422,17 @@ export default function ClientLMSDashboard() {
           
           {/* Trainee Card */}
           <div className="flex items-center gap-6.5 w-full lg:w-auto">
-            <div className="relative">
-              <div className="w-20 h-20 sm:w-25 sm:h-25 rounded-2xl bg-gradient-to-tr from-neon-pink via-neon-purple to-neon-cyan p-0.5 shadow-lg flex items-center justify-center">
-                <div className="w-full h-full rounded-2xl bg-[#0f172a] flex items-center justify-center text-3xl sm:text-4xl font-bold">
-                  👩‍🎤
-                </div>
+            <div className="relative group/profile">
+              <div className="w-20 h-20 sm:w-25 sm:h-25 rounded-2xl bg-gradient-to-tr from-neon-pink via-neon-purple to-neon-cyan p-0.5 shadow-lg flex items-center justify-center transition-all duration-500 hover:scale-105 hover:rotate-2 hover:glow-pink">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="/iu_profile.png" 
+                  alt="아이유 프로필" 
+                  className="w-full h-full rounded-2xl object-cover transition-transform duration-500 group-hover/profile:scale-105"
+                />
               </div>
-              <span className="absolute bottom-[-4px] right-[-4px] bg-neon-cyan text-[#0f172a] text-xs sm:text-sm font-black px-2.5 py-0.5 rounded-full border-2 border-[#0f172a]">
-                🇯🇵
+              <span className="absolute bottom-[-4px] right-[-4px] bg-neon-cyan text-[#0f172a] text-xs sm:text-sm font-black px-2.5 py-0.5 rounded-full border-2 border-[#0f172a] animate-pulse">
+                🇰🇷
               </span>
             </div>
             <div>

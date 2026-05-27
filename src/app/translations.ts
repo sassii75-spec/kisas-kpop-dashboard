@@ -34,12 +34,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Jaringan Pembelajaran Mandiri Online Terkoneksi Kamp Aktif"
   },
   traineeName: {
-    KOR: "연습생 Miya",
-    ENG: "Trainee Miya",
-    JPN: "研修生 Miya",
-    CHN: "练习生 Miya",
-    VIE: "Học viên Miya",
-    IDN: "Trainee Miya"
+    KOR: "연습생 아이유",
+    ENG: "Trainee IU",
+    JPN: "研修生 アイユー",
+    CHN: "练习生 IU",
+    VIE: "Học viên IU",
+    IDN: "Trainee IU"
   },
   traineeClass: {
     KOR: "Week 2 수료반",
@@ -50,12 +50,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Kelas Kelulusan Minggu 2"
   },
   traineeTrack: {
-    KOR: "국적: 일본 (Japan) • KISAS 글로벌 데뷔 트랙 코스 이수 중",
-    ENG: "Nationality: Japan • KISAS Global Debut Track Course in Progress",
-    JPN: "国籍：日本 (Japan) • KISASグローバルデ비ュートラックコース履修中",
-    CHN: "国籍：日本 (Japan) • KISAS全球出道特训课程进行中",
-    VIE: "Quốc tịch: Nhật Bản (Japan) • Đang học Khóa đào tạo Ra mắt Toàn cầu KISAS",
-    IDN: "Kewarganegaraan: Jepang (Japan) • Sedang Menjalani Kelas Jalur Debut Global KISAS"
+    KOR: "국적: 대한민국 (South Korea) • KISAS 글로벌 데뷔 트랙 코스 이수 중",
+    ENG: "Nationality: South Korea • KISAS Global Debut Track Course in Progress",
+    JPN: "国籍：大韓民国 (South Korea) • KISASグローバルデビュートラックコース履修中",
+    CHN: "国籍：大韩民国 (South Korea) • KISAS全球出道特训课程进行中",
+    VIE: "Quốc tịch: Hàn Quốc (South Korea) • Đang học Khóa đào tạo Ra mắt Toàn cầu KISAS",
+    IDN: "Kewarganegaraan: Korea Selatan (South Korea) • Sedang Menjalani Kelas Jalur Debut Global KISAS"
   },
   hudHours: {
     KOR: "누적 훈련 시간",
