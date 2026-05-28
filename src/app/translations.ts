@@ -130,12 +130,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Jejaring Global"
   },
   tabPortfolio: {
-    KOR: "데뷔 포트폴리오",
-    ENG: "Debut Portfolio",
-    JPN: "デビューポートフォリオ",
-    CHN: "出道作品集",
-    VIE: "Hồ sơ nghệ sĩ ra mắt",
-    IDN: "Portofolio Debut"
+    KOR: "캠프 역량 포트폴리오",
+    ENG: "Camp Competence Portfolio",
+    JPN: "キャンプ評価ポートフォリオ",
+    CHN: "营员能力作品集",
+    VIE: "Hồ sơ năng lực cá nhân",
+    IDN: "Portofolio Kompetensi"
   },
   missionTitle: {
     KOR: "오늘의 데뷔 미션 코스 (Daily Homework)",
@@ -1658,68 +1658,68 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Nomor: KISAS-2026-0521M • Tanggal: 21 Mei 2026 • Trainee: IU (Korea Selatan)"
   },
   portfolioReportTitle: {
-    KOR: "아티스트 성장 역량 리포트",
-    ENG: "Artist Core Competency Assessment Report",
-    JPN: "アーティスト成長能力評価レポート",
-    CHN: "练习生综合潜能与专业维度成长报告",
-    VIE: "Báo cáo Đánh giá Năng lực Cốt lõi Nghệ sĩ",
-    IDN: "Laporan Penilaian Kompetensi Inti Artis"
+    KOR: "인문학 K-Pop 창작 역량 리포트",
+    ENG: "Humanities K-Pop Creative Competence Report",
+    JPN: "人文学K-Pop創作評価レポート",
+    CHN: "人文K-Pop创作潜能成长报告",
+    VIE: "Báo cáo Năng lực Sáng tạo K-Pop Nhân văn",
+    IDN: "Laporan Kompetensi Kreatif K-Pop Humaniora"
   },
   radarVocal: {
-    KOR: "보컬 (Vocal)",
-    ENG: "Vocal",
-    JPN: "ボーカル (Vocal)",
-    CHN: "声乐演绎 (Vocal)",
-    VIE: "Thanh nhạc (Vocal)",
-    IDN: "Vokal (Vocal)"
+    KOR: "작사·작곡 (문학)",
+    ENG: "Songwriting (Lit)",
+    JPN: "作詞・作曲 (文学)",
+    CHN: "词曲创作 (文学)",
+    VIE: "Sáng tác (Văn học)",
+    IDN: "Menulis Lagu (Sastra)"
   },
   radarDance: {
-    KOR: "댄스 (Dance)",
-    ENG: "Dance",
-    JPN: "ダンス (Dance)",
-    CHN: "舞蹈张力 (Dance)",
-    VIE: "Vũ đạo (Dance)",
-    IDN: "Tari (Dance)"
+    KOR: "노래·춤 (현상학)",
+    ENG: "Vocal & Dance (Phenom)",
+    JPN: "歌・ダンス (現象学)",
+    CHN: "声乐与舞蹈 (现象学)",
+    VIE: "Hát & Múa (Hiện tượng học)",
+    IDN: "Vokal & Tari (Fenomenologi)"
   },
   radarVisual: {
-    KOR: "비주얼 (Visual)",
-    ENG: "Visual",
-    JPN: "ビジュアル (Visual)",
-    CHN: "外在表现 (Visual)",
-    VIE: "Visual (Visual)",
-    IDN: "Visual (Visual)"
+    KOR: "콘셉트·스타일 (미학)",
+    ENG: "Concept & Style (Aes)",
+    JPN: "コンセプト・スタイル (美学)",
+    CHN: "概念与风格 (美学)",
+    VIE: "Ý tưởng & Phong cách (Mỹ học)",
+    IDN: "Konsep & Gaya (Estetika)"
   },
   radarAttitude: {
-    KOR: "스타성 (Attitude)",
-    ENG: "Star Quality (Attitude)",
-    JPN: "スター性 (Attitude)",
-    CHN: "舞台气场 (Attitude)",
-    VIE: "Khí chất (Attitude)",
-    IDN: "Pesona Bintang (Attitude)"
+    KOR: "커뮤니티·마케팅 (사회학)",
+    ENG: "Community & Mktg (Soc)",
+    JPN: "コミュニティ (社会学)",
+    CHN: "社群与营销 (社会学)",
+    VIE: "Cộng đồng & Tiếp thị (Xã hội học)",
+    IDN: "Komunitas & Pemasaran (Sosiologi)"
   },
   radarFitness: {
-    KOR: "체력 (Fitness)",
-    ENG: "Fitness/Core",
-    JPN: "体力 (Fitness)",
-    CHN: "体能储值 (Fitness)",
-    VIE: "Thể lực (Fitness)",
-    IDN: "Kebugaran/Inti (Fitness)"
+    KOR: "인문학·협업",
+    ENG: "Humanities & Collab",
+    JPN: "人文学・協働",
+    CHN: "人文与协作",
+    VIE: "Nhân văn & Hợp tác",
+    IDN: "Humaniora & Kolaborasi"
   },
   vocalScale: {
-    KOR: "🎙 보컬 (Vocal)",
-    ENG: "🎙 Vocal",
-    JPN: "🎙 ボーカル (Vocal)",
-    CHN: "🎙 声乐演绎 (Vocal)",
-    VIE: "🎙 Thanh nhạc (Vocal)",
-    IDN: "🎙 Vokal (Vocal)"
+    KOR: "✍ 작사·작곡 (문학)",
+    ENG: "✍ Songwriting (Lit)",
+    JPN: "✍ 作詞・作曲 (文学)",
+    CHN: "✍ 词曲创作 (文学)",
+    VIE: "✍ Sáng tác (Văn học)",
+    IDN: "✍ Menulis Lagu (Sastra)"
   },
   danceScale: {
-    KOR: "💃 댄스 (Dance)",
-    ENG: "💃 Dance",
-    JPN: "💃 ダンス (Dance)",
-    CHN: "💃 舞蹈张力 (Dance)",
-    VIE: "💃 Vũ đạo (Dance)",
-    IDN: "💃 Tari (Dance)"
+    KOR: "🎤 노래·춤 (현상학)",
+    ENG: "🎤 Vocal & Dance (Phenom)",
+    JPN: "🎤 歌・ダンス (現象学)",
+    CHN: "🎤 声乐与舞蹈 (现象学)",
+    VIE: "🎤 Hát & Múa (Hiện tượng học)",
+    IDN: "🎤 Vokal & Tari (Fenomenologi)"
   },
   visualScale: {
     KOR: "📸 비주얼 (Visual)",
@@ -1730,20 +1730,20 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "📸 Visual (Visual)"
   },
   attitudeScale: {
-    KOR: "🌟 스타성 (Attitude)",
-    ENG: "🌟 Star Quality (Attitude)",
-    JPN: "🌟 スター性 (Attitude)",
-    CHN: "🌟 舞台气场 (Attitude)",
-    VIE: "🌟 Khí chất (Attitude)",
-    IDN: "🌟 Pesona Bintang (Attitude)"
+    KOR: "📣 커뮤니티·마케팅 (사회학)",
+    ENG: "📣 Community & Mktg (Soc)",
+    JPN: "📣 コミュニティ (社会学)",
+    CHN: "📣 社群与营销 (社会学)",
+    VIE: "📣 Cộng đồng & Tiếp thị (Xã hội học)",
+    IDN: "📣 Komunitas & Pemasaran (Sosiologi)"
   },
   fitnessScale: {
-    KOR: "🏋 체력/코어 (Fitness)",
-    ENG: "🏋 Fitness/Core",
-    JPN: "🏋 体力/体幹 (Fitness)",
-    CHN: "🏋 体能/核心力量 (Fitness)",
-    VIE: "🏋 Thể lực/Cơ cốt lõi (Fitness)",
-    IDN: "🏋 Kebugaran/Inti (Fitness)"
+    KOR: "🤝 인문학·협업",
+    ENG: "🤝 Humanities & Collab",
+    JPN: "🤝 人文学・協働",
+    CHN: "🤝 人文与协作",
+    VIE: "🤝 Nhân văn & Hợp tác",
+    IDN: "🤝 Humaniora & Kolaborasi"
   },
   danceBadge: {
     KOR: "최고",
@@ -1920,5 +1920,94 @@ export const translations: Record<string, Record<Lang, string>> = {
     CHN: "上传成功！KISAS AI声乐发声与骨盆重心轴纠偏测评已全部完成。",
     VIE: "đã tải lên thành công! Phân tích hiệu chỉnh giọng hát & trục khung chậu của KISAS AI đã hoàn thành.",
     IDN: "berhasil diunggah! Analisis koreksi vokal & poros pelvis KISAS AI telah selesai."
+  }
+,
+  creativeStepsTitle: {
+    KOR: "💡 KISAS 인문학 K-Pop 창작 5단계 이수 성과",
+    ENG: "💡 KISAS Humanities K-Pop 5 Creative Steps Achievement",
+    JPN: "💡 KISAS人文学K-Pop創作5段階履修成果",
+    CHN: "💡 KISAS人文K-Pop创意思维5阶段潜能结业实绩",
+    VIE: "💡 Thành tựu 5 bước Sáng tạo K-Pop Nhân văn KISAS",
+    IDN: "💡 Pencapaian 5 Langkah Kreatif K-Pop Humaniora KISAS"
+  },
+  creativeStep1Title: {
+    KOR: "1단계: K-pop 감상·분석",
+    ENG: "Step 1: K-pop Appreciation & Analysis",
+    JPN: "1段階：K-pop鑑賞・分析",
+    CHN: "第一阶段：K-pop经典赏析与解构",
+    VIE: "Bước 1: Thưởng thức & Phân tích K-pop",
+    IDN: "Langkah 1: Apresiasi & Analisis K-pop"
+  },
+  creativeStep1Desc: {
+    KOR: "IVE, BLACKPINK, BTS 등 글로벌 메이저 아티스트들의 음악 구조 및 안무 스타일 해체 분석 완료",
+    ENG: "Completed structured analysis of music & choreography styles of global major artists (IVE, BTS, etc.)",
+    JPN: "IVE、BLACKPINK、BTSなどのグローバル메저アーティストの音楽構造および振付スタイル解体分析完了",
+    CHN: "已完成对IVE、BLACKPINK、BTS等国际一线组合的主打歌编配及舞风拆解测评",
+    VIE: "Hoàn thành phân tích cấu trúc âm nhạc và phong cách vũ đạo của các nghệ sĩ lớn (IVE, BTS, v.v.)",
+    IDN: "Menyelesaikan analisis terstruktur gaya musik & koreografi artis besar global (IVE, BTS, dll.)"
+  },
+  creativeStep2Title: {
+    KOR: "2단계: 스타일 탐색 및 팀 구성",
+    ENG: "Step 2: Style Exploration & Team Building",
+    JPN: "2段階：スタイル探索およびチーム構成",
+    CHN: "第二阶段：曲风定位与主客观团队组建",
+    VIE: "Bước 2: Khám phá phong cách & Lập đội",
+    IDN: "Langkah 2: Eksplorasi Gaya & Pembentukan Tim"
+  },
+  creativeStep2Desc: {
+    KOR: "보컬·댄스 지향 취향 기반 매칭을 통한 KISAS 2기 창작 시너지 팀 빌딩 완료",
+    ENG: "Completed creative synergy team building for KISAS cohort 2 via preference-based matching",
+    JPN: "ボーカル・ダンス指向の好みベースのマッチングを通じたKISAS 2期創作シナジーチームビルディング完了",
+    CHN: "通过声乐/舞蹈偏好大数据配对，圆满组建KISAS第二期创意协同战队",
+    VIE: "Hoàn thành lập đội sáng tạo cho KISAS khóa 2 thông qua ghép cặp theo sở thích",
+    IDN: "Menyelesaikan pembentukan tim kreatif untuk KISAS angkatan 2 melalui pencocokan berbasis preferensi"
+  },
+  creativeStep3Title: {
+    KOR: "3단계: AI 작곡 및 영어 작사",
+    ENG: "Step 3: AI Composing & English Lyrics",
+    JPN: "3段階：AI作曲および英語作詞",
+    CHN: "第三阶段：AI旋律工程与学术英语作词",
+    VIE: "Bước 3: Sáng tác AI & Viết lời tiếng Anh",
+    IDN: "Langkah 3: Komposisi AI & Lirik Bahasa Inggris"
+  },
+  creativeStep3Desc: {
+    KOR: "인문학 수업 연동 영어 작사 및 Suno AI를 활용한 1차 창작곡 데모 음원 완성",
+    ENG: "Completed 1st creative demo song via Suno AI integration and English lyrics based on humanities",
+    JPN: "人文学授業連動の英語作詞およびSuno AIを活用した1次創作曲デモ音源完成",
+    CHN: "结合人文课自编词作，利用Suno AI生成并混缩出第一版独立原创音乐Demo",
+    VIE: "Hoàn thành bản demo sáng tác đầu tiên qua Suno AI và lời tiếng Anh liên kết bài học nhân văn",
+    IDN: "Menyelesaikan demo lagu kreatif pertama melalui integrasi Suno AI dan lirik berdasarkan humaniora"
+  },
+  creativeStep4Title: {
+    KOR: "4단계: AI Team Song Building",
+    ENG: "Step 4: AI Team Song Building",
+    JPN: "4段階：AI Team Song Building",
+    CHN: "第四阶段：团队AI音轨混音与成品母带",
+    VIE: "Bước 4: Xây dựng bài hát nhóm bằng AI",
+    IDN: "Langkah 4: Pembuatan Lagu Tim AI"
+  },
+  creativeStep4Desc: {
+    KOR: "팀 단위 창작곡 마스터링 및 파이널 무대용 오디오 엔지니어링 믹스 다운 완료",
+    ENG: "Completed team-based creative song mastering and audio engineering mixdown for final showcase",
+    JPN: "チーム単位の創作曲マスタリングおよびファイナルステージ用オーディオエンジニアリングミックスダウン完了",
+    CHN: "完成团队合唱原创曲目的多轨后期编排、人声对齐与母带混音工程",
+    VIE: "Hoàn thành làm chủ bài hát sáng tạo và trộn âm thanh kỹ thuật cho sân khấu tốt nghiệp",
+    IDN: "Menyelesaikan mastering lagu kreatif tim dan mixdown rekayasa audio untuk showcase akhir"
+  },
+  creativeStep5Title: {
+    KOR: "5단계: 무대 완성 및 퍼포먼스",
+    ENG: "Step 5: Stage Completion & Performance",
+    JPN: "5段階：舞台完成およびパフォーマンス",
+    CHN: "第五阶段：毕业汇报演出与创意路演",
+    VIE: "Bước 5: Hoàn thiện sân khấu & Biểu diễn",
+    IDN: "Langkah 5: Penyelesaian Sanggung & Pertunjukan"
+  },
+  creativeStep5Desc: {
+    KOR: "창작 오리지널 곡 프레젠테이션 및 댄스 커버 퍼포먼스 무대 성공적 수료",
+    ENG: "Completed original creative song presentation and dance cover performance stage",
+    JPN: "創作オリジナル曲のプレゼンテーションおよびダンスカバーパフォーマンス舞台成功裏に修了",
+    CHN: "圆满完成原创毕业作品现场路演展示及高难度主打歌群舞演练",
+    VIE: "Hoàn thành trình diễn bài hát sáng tạo 및 댄스 커버 퍼포먼스 무대 성공적 수료",
+    IDN: "Menyelesaikan presentasi lagu kreatif orisinal dan panggung pertunjukan cover tari"
   }
 };

@@ -1879,6 +1879,79 @@ export default function ClientLMSDashboard() {
               </div>
 
             </div>
+
+            {/* KISAS Creative 5 Steps Timeline Component */}
+            <div className="print-card glassmorphism-card rounded-3xl p-7.5 sm:p-10 space-y-6 relative overflow-hidden">
+              <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
+                <Sparkles className="w-6 h-6 text-[#CFA764] animate-float" />
+                <h3 className="text-lg sm:text-xl font-black text-slate-100">{t("creativeStepsTitle")}</h3>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-5 relative pt-4">
+                {/* Horizontal line connector for desktop */}
+                <div className="hidden md:block absolute top-14 left-12 right-12 h-0.5 bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan opacity-25 -z-10" />
+
+                {/* Step 1 */}
+                <div className="bg-slate-950/40 border border-slate-850 p-5 rounded-2xl hover:border-neon-pink/30 hover:scale-[1.01] hover:shadow-lg transition-all group flex flex-col justify-between gap-4">
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-mono font-black text-neon-pink">01</span>
+                      <span className="text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-450 border border-emerald-500/25">✓ 이수</span>
+                    </div>
+                    <h4 className="text-sm sm:text-base font-black text-slate-100 group-hover:text-neon-pink transition-colors">{t("creativeStep1Title")}</h4>
+                    <p className="text-xs sm:text-sm text-slate-400 font-medium leading-relaxed">{t("creativeStep1Desc")}</p>
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="bg-slate-950/40 border border-slate-850 p-5 rounded-2xl hover:border-neon-purple/30 hover:scale-[1.01] hover:shadow-lg transition-all group flex flex-col justify-between gap-4">
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-mono font-black text-neon-purple">02</span>
+                      <span className="text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-450 border border-emerald-500/25">✓ 이수</span>
+                    </div>
+                    <h4 className="text-sm sm:text-base font-black text-slate-100 group-hover:text-neon-purple transition-colors">{t("creativeStep2Title")}</h4>
+                    <p className="text-xs sm:text-sm text-slate-400 font-medium leading-relaxed">{t("creativeStep2Desc")}</p>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="bg-slate-950/40 border border-slate-850 p-5 rounded-2xl hover:border-neon-cyan/30 hover:scale-[1.01] hover:shadow-lg transition-all group flex flex-col justify-between gap-4">
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-mono font-black text-neon-cyan">03</span>
+                      <span className="text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-450 border border-emerald-500/25">✓ 이수</span>
+                    </div>
+                    <h4 className="text-sm sm:text-base font-black text-slate-100 group-hover:text-neon-cyan transition-colors">{t("creativeStep3Title")}</h4>
+                    <p className="text-xs sm:text-sm text-slate-400 font-medium leading-relaxed">{t("creativeStep3Desc")}</p>
+                  </div>
+                </div>
+
+                {/* Step 4 */}
+                <div className="bg-slate-950/40 border border-slate-850 p-5 rounded-2xl hover:border-amber-500/30 hover:scale-[1.01] hover:shadow-lg transition-all group flex flex-col justify-between gap-4">
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-mono font-black text-amber-400">04</span>
+                      <span className="text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-450 border border-emerald-500/25">✓ 이수</span>
+                    </div>
+                    <h4 className="text-sm sm:text-base font-black text-slate-100 group-hover:text-amber-450 transition-colors">{t("creativeStep4Title")}</h4>
+                    <p className="text-xs sm:text-sm text-slate-400 font-medium leading-relaxed">{t("creativeStep4Desc")}</p>
+                  </div>
+                </div>
+
+                {/* Step 5 */}
+                <div className="bg-slate-950/40 border border-[#CFA764]/20 p-5 rounded-2xl hover:border-neon-pink/30 hover:scale-[1.01] hover:shadow-lg transition-all group flex flex-col justify-between gap-4">
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-mono font-black text-[#E6C897]">05</span>
+                      <span className="text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-450 border border-emerald-500/25">✓ 이수</span>
+                    </div>
+                    <h4 className="text-sm sm:text-base font-black text-slate-100 group-hover:text-[#E6C897] transition-colors">{t("creativeStep5Title")}</h4>
+                    <p className="text-xs sm:text-sm text-slate-400 font-medium leading-relaxed">{t("creativeStep5Desc")}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         )}
 
