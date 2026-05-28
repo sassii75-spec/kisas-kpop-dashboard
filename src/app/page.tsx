@@ -36,7 +36,7 @@ import {
 
 export default function ClientLMSDashboard() {
   // --- States ---
-  const [activeTab, setActiveTab] = useState<"training" | "ai" | "curriculum" | "network" | "portfolio">("training");
+  const [activeTab, setActiveTab] = useState<"training" | "ai" | "curriculum" | "network" | "portfolio">("curriculum");
   const [lang, setLang] = useState<Lang>("KOR");
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   
@@ -469,6 +469,18 @@ export default function ClientLMSDashboard() {
         <div className="bg-slate-900/60 border border-slate-800/80 p-2 rounded-2xl grid grid-cols-2 md:grid-cols-5 gap-3.5 shadow-2xl">
           
           <button
+            onClick={() => setActiveTab("curriculum")}
+            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 col-span-2 md:col-span-1 shadow-sm border ${
+              activeTab === "curriculum"
+                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
+                : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
+            }`}
+          >
+            <BookOpen className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "curriculum" ? "text-white" : "text-[#CFA764]/70 group-hover:text-[#CFA764]"}`} />
+            <span>{t("tabRoadmap")}</span>
+          </button>
+
+          <button
             onClick={() => setActiveTab("training")}
             className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 shadow-sm border ${
               activeTab === "training"
@@ -490,18 +502,6 @@ export default function ClientLMSDashboard() {
           >
             <Video className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "ai" ? "text-white" : "text-neon-cyan/70 group-hover:text-neon-cyan animate-pulse"}`} />
             <span>{t("tabFeedback")}</span>
-          </button>
-
-          <button
-            onClick={() => setActiveTab("curriculum")}
-            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 col-span-2 md:col-span-1 shadow-sm border ${
-              activeTab === "curriculum"
-                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
-                : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
-            }`}
-          >
-            <BookOpen className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "curriculum" ? "text-white" : "text-[#CFA764]/70 group-hover:text-[#CFA764]"}`} />
-            <span>{t("tabRoadmap")}</span>
           </button>
 
           <button
