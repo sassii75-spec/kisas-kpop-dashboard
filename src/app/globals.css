@@ -120,3 +120,25 @@ body {
   }
 }
 
+/* Live Camera Avatar Effects (Live Feed Animation) */
+@keyframes avatar-scan {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.animate-avatar-scan {
+  animation: avatar-scan 4s infinite linear;
+}
+
+@keyframes avatar-kenburns {
+  0%, 100% { transform: scale(1.02) translate(0, 0); }
+  50% { transform: scale(1.12) translate(-1.5%, 1%); }
+}
+
+.animate-avatar-kenburns {
+  animation: avatar-kenburns 15s infinite ease-in-out;
+}
+
+

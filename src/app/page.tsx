@@ -422,16 +422,39 @@ export default function ClientLMSDashboard() {
           
           {/* Trainee Card */}
           <div className="flex items-center gap-6.5 w-full lg:w-auto">
-            <div className="relative group/profile">
-              <div className="w-20 h-20 sm:w-25 sm:h-25 rounded-2xl bg-gradient-to-tr from-neon-pink via-neon-purple to-neon-cyan p-0.5 shadow-lg flex items-center justify-center transition-all duration-500 hover:scale-105 hover:rotate-2 hover:glow-pink">
+            <div className="relative group/profile select-none">
+              <div className="w-20 h-20 sm:w-25 sm:h-25 rounded-2xl bg-gradient-to-tr from-neon-pink via-neon-purple to-neon-cyan p-0.5 shadow-lg flex items-center justify-center transition-all duration-500 hover:scale-105 hover:rotate-2 hover:glow-pink relative overflow-hidden">
+                
+                {/* Blinking Live REC Overlay */}
+                <div className="absolute top-1.5 left-1.5 flex items-center gap-1 bg-black/70 backdrop-blur-md px-1.5 py-0.5 rounded-md text-[8px] font-mono text-rose-500 font-extrabold uppercase tracking-wider select-none pointer-events-none z-20 border border-rose-500/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping shrink-0" />
+                  REC
+                </div>
+
+                {/* Camera Viewfinder corners */}
+                <div className="absolute inset-1.5 pointer-events-none z-20 opacity-50">
+                  <div className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-white/80" />
+                  <div className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-white/80" />
+                  <div className="absolute bottom-0 left-0 w-1.5 h-1.5 border-b border-l border-white/80" />
+                  <div className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-white/80" />
+                </div>
+
+                {/* Sci-Fi Grid Tech Scanlines Overlay */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(18,24,38,0)_95%,rgba(230,200,151,0.08)_95%)] bg-[size:100%_4px] pointer-events-none rounded-2xl z-10" />
+
+                {/* Sweeping Laser Scanner Bar */}
+                <div className="absolute inset-x-0 h-[2px] bg-[#E6C897]/50 shadow-[0_0_8px_rgba(230,200,151,0.7)] animate-avatar-scan pointer-events-none z-10" />
+
+                {/* Profile Image with smooth infinite Ken Burns Zoom/Pan Animation */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="/iu_profile.png" 
                   alt="아이유 프로필" 
-                  className="w-full h-full rounded-2xl object-cover transition-transform duration-500 group-hover/profile:scale-105"
+                  className="w-full h-full rounded-2xl object-cover animate-avatar-kenburns transition-transform duration-500 group-hover/profile:brightness-110"
                 />
+
               </div>
-              <span className="absolute bottom-[-4px] right-[-4px] bg-neon-cyan text-[#0f172a] text-xs sm:text-sm font-black px-2.5 py-0.5 rounded-full border-2 border-[#0f172a] animate-pulse">
+              <span className="absolute bottom-[-4px] right-[-4px] bg-neon-cyan text-[#0f172a] text-xs sm:text-sm font-black px-2.5 py-0.5 rounded-full border-2 border-[#0f172a] animate-pulse z-20">
                 🇰🇷
               </span>
             </div>
