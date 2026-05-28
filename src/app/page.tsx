@@ -445,19 +445,19 @@ export default function ClientLMSDashboard() {
           </div>
 
           {/* Core Trainee Stats */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-8 w-full lg:w-auto text-center divide-x divide-slate-850">
-            <div className="px-2 sm:px-4">
-              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2 whitespace-nowrap">{t("hudHours")}</span>
-              <strong className="text-lg sm:text-xl md:text-2xl font-black text-neon-pink whitespace-nowrap">{t("hudHoursValue")}</strong>
+          <div className="grid grid-cols-3 gap-2 sm:gap-6 w-full lg:w-auto text-center divide-x divide-slate-850">
+            <div className="px-1 sm:px-3 flex flex-col justify-between">
+              <span className="text-[10px] xs:text-xs sm:text-sm text-slate-450 font-bold uppercase tracking-wider block mb-1.5 whitespace-normal leading-tight min-h-[2.5rem] flex items-center justify-center text-center">{t("hudHours")}</span>
+              <strong className="text-base sm:text-lg md:text-xl font-black text-neon-pink whitespace-nowrap">{t("hudHoursValue")}</strong>
             </div>
-            <div className="px-2 sm:px-4">
-              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2 whitespace-nowrap">{t("hudHomework")}</span>
-              <strong className="text-lg sm:text-xl md:text-2xl font-black text-neon-cyan whitespace-nowrap">{progressPercent}%</strong>
+            <div className="px-1 sm:px-3 flex flex-col justify-between">
+              <span className="text-[10px] xs:text-xs sm:text-sm text-slate-450 font-bold uppercase tracking-wider block mb-1.5 whitespace-normal leading-tight min-h-[2.5rem] flex items-center justify-center text-center">{t("hudHomework")}</span>
+              <strong className="text-base sm:text-lg md:text-xl font-black text-neon-cyan whitespace-nowrap">{progressPercent}%</strong>
             </div>
-            <div className="px-2 sm:px-4">
-              <span className="text-xs sm:text-sm text-slate-450 font-black uppercase tracking-wider block mb-2 whitespace-nowrap">{t("hudAudition")}</span>
-              <strong className="text-lg sm:text-xl md:text-2xl font-black text-white flex items-center justify-center gap-2 whitespace-nowrap">
-                {t("hudCampDay")} <span className="w-3 h-3 rounded-full bg-neon-pink animate-ping" />
+            <div className="px-1 sm:px-3 flex flex-col justify-between">
+              <span className="text-[10px] xs:text-xs sm:text-sm text-slate-450 font-bold uppercase tracking-wider block mb-1.5 whitespace-normal leading-tight min-h-[2.5rem] flex items-center justify-center text-center">{t("hudAudition")}</span>
+              <strong className="text-base sm:text-lg md:text-xl font-black text-white flex items-center justify-center gap-1.5 whitespace-nowrap">
+                {t("hudCampDay")} <span className="w-2.5 h-2.5 rounded-full bg-neon-pink animate-ping shrink-0" />
               </strong>
             </div>
           </div>
