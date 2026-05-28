@@ -89,7 +89,7 @@ export default function ClientLMSDashboard() {
 
   // 2. [탭 2 - AI 비디오 훈련] 업로드 파일 및 진단 결과
   const [uploadFile, setUploadFile] = useState<{ name: string; size: string; progress: number; completed: boolean } | null>({
-    name: "20260521_안무과제_댄스라인_Miya.mp4",
+    name: "20260521_안무과제_댄스라인_IU.mp4",
     size: "42.8 MB",
     progress: 100,
     completed: true
@@ -104,7 +104,7 @@ export default function ClientLMSDashboard() {
       id: "f1",
       author: "정민 (대한민국)",
       avatar: "🇰🇷",
-      content: "캠프 끝나고 도쿄로 돌아간 Miya! 보컬 연습 열심히 하고 있어? 내가 보낸 안무 피드백 영상 체크해 봐! 😊",
+      content: "캠프 끝나고 서울에서 연습 중인 아이유! 보컬 연습 열심히 하고 있어? 내가 보낸 안무 피드백 영상 체크해 봐! 😊",
       likes: 12,
       comments: [
         { id: "c1_1", author: "Coach Min", text: "두 분의 협동 시너지가 오디션 평가에 매우 긍정적입니다!" }
@@ -115,12 +115,12 @@ export default function ClientLMSDashboard() {
     },
     {
       id: "f2",
-      author: "Miya (일본)",
-      avatar: "🇯🇵",
+      author: "아이유 (대한민국)",
+      avatar: "🇰🇷",
       content: "정민! 대시보드 커뮤니티 채널에 내 오늘 자 보컬 커버 올렸어. 트레이너 쌤이 라이브 때 봐주셨으면 좋겠다! 🎤🎶",
       likes: 8,
       comments: [
-        { id: "c2_1", author: "정민", text: "와 Miya! 고음 부분 힘 빠지는 거 완전 해결됐네 대박!!" }
+        { id: "c2_1", author: "정민", text: "와 아이유! 고음 부분 힘 빠지는 거 완전 해결됐네 대박!!" }
       ],
       liked: false,
       showComments: false,
@@ -267,7 +267,7 @@ export default function ClientLMSDashboard() {
         if (f.id === feedId && f.newCommentText.trim()) {
           return {
             ...f,
-            comments: [...f.comments, { id: `c_${Date.now()}`, author: "나 (연습생 Miya)", text: f.newCommentText.trim() }],
+            comments: [...f.comments, { id: `c_${Date.now()}`, author: "나 (연습생 아이유)", text: f.newCommentText.trim() }],
             newCommentText: ""
           };
         }

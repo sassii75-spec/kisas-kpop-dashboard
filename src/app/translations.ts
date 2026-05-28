@@ -170,12 +170,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Komentar Penyemangat Mingguan Direktur"
   },
   weeklyMotivationComment: {
-    KOR: `"Miya, 지난 보컬 분석에서 비강 쪽 호흡 압박이 높았는데, VOD 코스를 수강하며 이번 주 업로드 과제에서 턱 근육 긴장을 푸는 노력이 훌륭히 돋보였어! 댄스 코어도 조금만 더 끌어올리자!"`,
-    ENG: `"Miya, although vocal pressure near the nasal cavity was high in last week's analysis, your effort in releasing jaw tension in this week's uploaded assignment through VOD study was outstanding! Let's work on your dance core a bit more!"`,
-    JPN: `"Miya、前回のボーカル分析で鼻腔側の呼吸圧が高かったのですが、VODコースを受講し、今週의アップロード課題で顎の筋肉の緊張をほぐす努力が素晴らしく見えました！ダンスの体幹ももう少し引き上げましょう！"`,
-    CHN: `"Miya，在上次声乐分析中，你的鼻腔呼吸压力偏高。但通过学习视频课程，你在本周上传的作业中努力放松下巴肌肉的表现非常出色！让我们把舞蹈核心力量也再提升一点！"`,
-    VIE: `"Miya, trong phân tích thanh nhạc trước, áp lực thở phía khoang mũi của em hơi cao, nhưng qua việc học VOD, nỗ lực thả lỏng cơ hàm trong bài tập tải lên tuần này đã nổi bật rất tuyệt vời! Hãy cố gắng đẩy cao thể lực cốt lõi vũ đạo thêm một chút nhé!"`,
-    IDN: `"Miya, meskipun tekanan napas di sekitar rongga hidungmu cukup tinggi pada analisis vokal lalu, usahamu merilekskan otot rahang pada tugas minggu ini lewat belajar VOD sangat luar biasa! Mari tingkatkan kekuatan inti tarianmu sedikit lagi!"`
+    KOR: `"아이유, 지난 보컬 분석에서 비강 쪽 호흡 압박이 높았는데, VOD 코스를 수강하며 이번 주 업로드 과제에서 턱 근육 긴장을 푸는 노력이 훌륭히 돋보였어! 댄스 코어도 조금만 더 끌어올리자!"`,
+    ENG: `"IU, although vocal pressure near the nasal cavity was high in last week's analysis, your effort in releasing jaw tension in this week's uploaded assignment through VOD study was outstanding! Let's work on your dance core a bit more!"`,
+    JPN: `"アイユー、前回のボーカル分析で鼻腔側の呼吸圧が高かったのですが、VODコースを受講し、今週의アップロード課題で顎の筋肉の緊張をほぐす努力が素晴らしく見えました！ダンスの体幹ももう少し引き上げましょう！"`,
+    CHN: `"IU，在上次声乐分析中，你的鼻腔呼吸压力偏高。但通过学习视频课程，你在本周上传的作业中努力放松下巴肌肉的表现非常出色！让我们把舞蹈核心力量也再提升一点！"`,
+    VIE: `"IU, trong phân tích thanh nhạc trước, áp lực thở phía khoang mũi của em hơi cao, nhưng qua việc học VOD, nỗ lực thả lỏng cơ hàm trong bài tập tải lên tuần này đã nổi bật rất tuyệt vời! Hãy cố gắng đẩy cao thể lực cốt lõi vũ đạo thêm một chút nhé!"`,
+    IDN: `"IU, meskipun tekanan napas di sekitar rongga hidungmu cukup tinggi pada analisis vokal lalu, usahamu merilekskan otot rahang pada tugas minggu ini lewat belajar VOD sangat luar biasa! Mari tingkatkan kekuatan inti tarianmu sedikit lagi!"`
   },
   weeklyMotivationAuthor: {
     KOR: "KISAS 수석 보컬 디렉터 지니 (Jiny)",
@@ -1434,12 +1434,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Sejajarkan ujung jari dan pandangan mata"
   },
   ts1DetailLabel: {
-    KOR: "[ Miya.mp4 00:42 안무 드로잉선 ]",
-    ENG: "[ Miya.mp4 00:42 Choreography Drawing Line ]",
-    JPN: "[ Miya.mp4 00:42 振付描画ライン ]",
-    CHN: "[ Miya.mp4 00:42 肢体角度辅导线 ]",
-    VIE: "[ Miya.mp4 00:42 Đường vẽ vũ đạo ]",
-    IDN: "[ Miya.mp4 00:42 Garis Gambar Koreografi ]"
+    KOR: "[ 아이유.mp4 00:42 안무 드로잉선 ]",
+    ENG: "[ IU.mp4 00:42 Choreography Drawing Line ]",
+    JPN: "[ アイユー.mp4 00:42 振付描画ライン ]",
+    CHN: "[ IU.mp4 00:42 肢体角度辅导线 ]",
+    VIE: "[ IU.mp4 00:42 Đường vẽ vũ đạo ]",
+    IDN: "[ IU.mp4 00:42 Garis Gambar Koreografi ]"
   },
   ts1DetailDesc: {
     KOR: "시선을 손가락 끝으로 고정하여 손 에너지가 연장되도록 거울 고정 훈련을 수행하십시오.",
@@ -1522,12 +1522,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Kirim"
   },
   feed1Content: {
-    KOR: "캠프 끝나고 도쿄로 돌아간 Miya! 보컬 연습 열심히 하고 있어? 내가 보낸 안무 피드백 영상 체크해 봐! 😊",
-    ENG: "Miya who went back to Tokyo after the camp! Are you practicing singing hard? Check out the choreography feedback video I sent you! 😊",
-    JPN: "キャンプが終わって東京に戻ったMiya！ボーカルの練習頑張ってる？私が送ったダンスのフィードバック動画チェックしてみて！😊",
-    CHN: "集训营落幕后回到东京的Miya！有在认真练声吗？记得查收我刚给你发的编舞改进比对录像哦！😊",
-    VIE: "Miya đã quay lại Tokyo sau trại! Em đang luyện giọng chăm chỉ chứ? Hãy kiểm tra video phản hồi vũ đạo anh gửi nhé! 😊",
-    IDN: "Miya yang kembali ke Tokyo setelah kamp! Apakah kamu berlatih vokal dengan giat? Periksa video umpan balik koreografi yang saya kirimkan! 😊"
+    KOR: "캠프 끝나고 서울에서 연습 중인 아이유! 보컬 연습 열심히 하고 있어? 내가 보낸 안무 피드백 영상 체크해 봐! 😊",
+    ENG: "IU who is practicing in Seoul after the camp! Are you practicing singing hard? Check out the choreography feedback video I sent you! 😊",
+    JPN: "キャンプが終わってソウルで練習しているアイユー！ボーカルの練習頑張ってる？私が送ったダンスのフィードバック動画チェックしてみて！😊",
+    CHN: "集训营落幕后在首尔练习的IU！有在认真练声吗？记得查收我刚给你发的编舞改进比对录像哦！😊",
+    VIE: "IU đang luyện tập ở Seoul sau trại! Em đang luyện giọng chăm chỉ chứ? Hãy kiểm tra video phản hồi vũ đạo anh gửi nhé! 😊",
+    IDN: "IU yang berlatih di Seoul setelah kamp! Apakah kamu berlatih vokal dengan giat? Periksa video umpan balik koreografi yang saya kirimkan! 😊"
   },
   feed1Comment: {
     KOR: "두 분의 협동 시너지가 오디션 평가에 매우 긍정적입니다!",
@@ -1546,12 +1546,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Jung-min! Saya mengunggah cover vokal saya hari ini ke saluran komunitas dasbor. Berharap guru pelatih memeriksanya saat sesi siaran langsung! 🎤🎶"
   },
   feed2Comment: {
-    KOR: "와 Miya! 고음 부분 힘 빠지는 거 완전 해결됐네 대박!!",
-    ENG: "Wow Miya! You totally solved the loss of power in high notes, amazing!!",
-    JPN: "わあMiya！高音部分で息が抜ける問題が完全に解消されたね、すごい！！",
-    CHN: "天哪Miya！以前唱高音发虚漏气的问题完全被纠正过来了，好厉害！！",
-    VIE: "Oa Miya! Lỗi hụt hơi ở nốt cao đã được giải quyết hoàn toàn rồi, tuyệt quá!!",
-    IDN: "Wah Miya! Kamu benar-benar mengatasi hilangnya kekuatan pada nada tinggi, luar biasa!!"
+    KOR: "와 아이유! 고음 부분 힘 빠지는 거 완전 해결됐네 대박!!",
+    ENG: "Wow IU! You totally solved the loss of power in high notes, amazing!!",
+    JPN: "わあアイユー！高音部分で息が抜ける問題が完全に解消されたね、すごい！！",
+    CHN: "天哪IU！以前唱高音发虚漏气的问题完全被纠正过来了，好厉害！！",
+    VIE: "Oa IU! Lỗi hụt hơi ở nốt cao đã được giải quyết hoàn toàn rồi, tuyệt quá!!",
+    IDN: "Wah IU! Kamu benar-benar mengatasi hilangnya kekuatan pada nada tinggi, luar biasa!!"
   },
   liveTitle: {
     KOR: "정기 글로벌 라이브 멘토링",
@@ -1650,12 +1650,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "Portofolio Pertumbuhan Penilaian Artis Resmi & Profil Audisi Khusus"
   },
   printMeta: {
-    KOR: "발급번호: KISAS-2026-0521M • 발급일자: 2026. 05. 21 • 훈련생명: Miya (일본)",
-    ENG: "No: KISAS-2026-0521M • Date: May 21, 2026 • Trainee: Miya (Japan)",
-    JPN: "発行番号：KISAS-2026-0521M • 発行日：2026.05.21 • 研修生名：Miya (日本)",
-    CHN: "归档编号：KISAS-2026-0521M • 日期：2026.05.21 • 学员姓名：Miya (日本)",
-    VIE: "Mã số: KISAS-2026-0521M • Ngày cấp: 21.05.2026 • Học viên: Miya (Nhật Bản)",
-    IDN: "Nomor: KISAS-2026-0521M • Tanggal: 21 Mei 2026 • Trainee: Miya (Jepang)"
+    KOR: "발급번호: KISAS-2026-0521M • 발급일자: 2026. 05. 21 • 훈련생명: 아이유 (대한민국)",
+    ENG: "No: KISAS-2026-0521M • Date: May 21, 2026 • Trainee: IU (South Korea)",
+    JPN: "発行番号：KISAS-2026-0521M • 発行日：2026.05.21 • 研修生名：アイユー (韓国)",
+    CHN: "归档编号：KISAS-2026-0521M • 日期：2026.05.21 • 学员姓名：IU (韩国)",
+    VIE: "Mã số: KISAS-2026-0521M • Ngày cấp: 21.05.2026 • Học viên: IU (Hàn Quốc)",
+    IDN: "Nomor: KISAS-2026-0521M • Tanggal: 21 Mei 2026 • Trainee: IU (Korea Selatan)"
   },
   portfolioReportTitle: {
     KOR: "아티스트 성장 역량 리포트",
@@ -1810,12 +1810,12 @@ export const translations: Record<string, Record<Lang, string>> = {
     IDN: "🗣 Opini Akhir Direktur & Staf Pengajar"
   },
   opinionContent: {
-    KOR: `"연습생 Miya는 지난 14일간의 집중 KISAS 오프라인 트레이닝 캠프 수료 및 일본 귀국 후 LMS를 이용한 사후 1:1 트레이닝에 적극 참여하였습니다. 특히 보컬 파트 연구개 상하 확보를 통한 F5~G5 구간 성대 긴장도 제어가 비약적으로 발전했으며, 댄스 파트는 현재 K-Pop 메이저 데뷔에 적합한 탄탄한 하체 밸런스를 입증하여 오디션 합격 가능성이 매우 높음을 강력히 보증합니다."`,
-    ENG: `"Trainee Miya completed the intensive 14-day KISAS offline training camp and has actively participated in post-camp 1:1 training via the LMS after returning to Japan. Particularly in vocals, her control over vocal fold tension in the F5-G5 range by opening the soft palate vertically has progressed dramatically. In dance, she demonstrated solid lower-body balance suited for a major K-Pop debut, strongly warranting a very high chance of passing auditions."`,
-    JPN: `"研修生Miyaは、過去14日間の集中KISASオフラインキャンプを修了し、日本に帰国後もLMSを利用した事後1:1オンラインレッスンに非常に熱心に参加しました。特に歌唱において、軟口蓋の上下スペースの確保によるF5〜G5音域の声帯緊張コントロール能力が飛躍的に成長しました。ダンスでは、現在のK-Popメジャーデビューに求められる極めて安定した下半身の軸バランスを実証し、各社のオーディションに合格する可能性が非常に高いことを強く保証します。"`,
-    CHN: `"练习生Miya在顺利通过为期14天的高强度线下KISAS封闭式实训营后，回到日本仍积极利用LMS平台开展远端1:1纠音辅导。在声乐领域，通过上下打开软腭的物理发声腔体调整，使其在F5~G5高音阶的声带拉伸控制度上取得了飞跃性的实质突破；舞蹈层面则展现出极具职业化水准的腰腹核心与底盘稳定性，与当前K-Pop大型娱乐厂牌严苛的选秀录用标准深度契合，我们一致坚定看好其具备极高的出道胜出概率。"`,
-    VIE: `"Học viên Miya đã hoàn thành trại huấn luyện ngoại tuyến KISAS tập trung trong 14 ngày qua và tích cực tham gia huấn luyện 1:1 sau trại qua LMS sau khi trở về Nhật Bản. Đặc biệt về thanh nhạc, khả năng kiểm soát độ căng của dây thanh quản trong phạm vi F5-G5 bằng cách mở rộng vòm miệng mềm theo chiều dọc đã tiến bộ vượt bậc. Về vũ đạo, cô đã chứng tỏ sự thăng bằng thân dưới vững chắc rất phù hợp để ra mắt K-Pop chính thức, bảo đảm cơ hội đỗ thử giọng cực kỳ cao."`,
-    IDN: `"Trainee Miya menyelesaikan kamp latihan luring intensif KISAS selama 14 hari dan telah berpartisipasi aktif dalam latihan 1:1 pasca-kamp via LMS setelah kembali ke Jepang. Terutama pada vokal, kontrol ketegangan pita suara pada rentang F5-G5 dengan membuka langit-langit lunak secara vertikal berkembang sangat pesat. Pada tarian, ia menunjukkan keseimbangan tubuh bagian bawah kokoh yang sangat cocok untuk debut K-Pop skala besar, sangat menjamin peluang kelulusan audisi yang tinggi."`
+    KOR: `"연습생 아이유는 지난 14일간의 집중 KISAS 오프라인 트레이닝 캠프 수료 및 서울에서 연습하며 LMS를 이용한 사후 1:1 트레이닝에 적극 참여하였습니다. 특히 보컬 파트 연구개 상하 확보를 통한 F5~G5 구간 성대 긴장도 제어가 비약적으로 발전했으며, 댄스 파트는 현재 K-Pop 메이저 데뷔에 적합한 탄탄한 하체 밸런스를 입증하여 오디션 합격 가능성이 매우 높음을 강력히 보증합니다."`,
+    ENG: `"Trainee IU completed the intensive 14-day KISAS offline training camp and has actively participated in post-camp 1:1 training via the LMS while practicing in Seoul. Particularly in vocals, her control over vocal fold tension in the F5-G5 range by opening the soft palate vertically has progressed dramatically. In dance, she demonstrated solid lower-body balance suited for a major K-Pop debut, strongly warranting a very high chance of passing auditions."`,
+    JPN: `"研修生アイユーは、過去14日間の集中KISASオフラインキャンプを修了し、ソウルでの練習中もLMSを利用した事後1:1オンラインレッスンに非常に熱心に参加しました。特に歌唱において、軟口蓋の上下スペースの確保によるF5〜G5音域の声帯緊張コントロール能力が飛躍的に成長しました。ダンスでは、現在のK-Popメジャーデビューに求められる極めて安定した下半身の軸バランスを実証し、各社のオーディションに合格する可能性が非常に高いことを強く保証します。"`,
+    CHN: `"练习生IU在顺利通过为期14天的高强度线下KISAS封闭式实训营后，在韩国仍积极利用LMS平台开展远端1:1纠音辅导。在声乐领域，通过上下打开软腭的物理发声腔体调整，使其在F5~G5高音阶的声带拉伸控制度上取得了飞跃性的实质突破；舞蹈层面则展现出极具职业化水准的腰腹核心与底盘稳定性，与当前K-Pop大型娱乐厂牌严苛的选秀录用标准深度契合，我们一致坚定看好其具备极高的出道胜出概率。"`,
+    VIE: `"Học viên IU đã hoàn thành trại huấn luyện ngoại tuyến KISAS tập trung trong 14 ngày qua và tích cực tham gia huấn luyện 1:1 sau trại qua LMS trong khi đang luyện tập ở Seoul. Đặc biệt về thanh nhạc, khả năng kiểm soát độ căng của dây thanh quản trong phạm vi F5-G5 bằng cách mở rộng vòm miệng mềm theo chiều dọc đã tiến bộ vượt bậc. Về vũ đạo, cô đã chứng tỏ sự thăng bằng thân dưới vững chắc rất phù hợp để ra mắt K-Pop chính thức, bảo đảm cơ hội đỗ thử giọng cực kỳ cao."`,
+    IDN: `"Trainee IU menyelesaikan kamp latihan luring intensif KISAS selama 14 hari dan telah berpartisipasi aktif dalam latihan 1:1 pasca-kamp via LMS saat berlatih di Seoul. Terutama pada vokal, kontrol ketegangan pita suara pada rentang F5-G5 dengan membuka langit-langit lunak secara vertikal berkembang sangat pesat. Pada tarian, ia menunjukkan keseimbangan tubuh bagian bawah kokoh yang sangat cocok untuk debut K-Pop skala besar, sangat menjamin peluang kelulusan audisi yang tinggi."`
   },
   opinionSignature: {
     KOR: "— KISAS 글로벌 아티스트 심사위원 및 수석 코치진 일동",
