@@ -2010,4 +2010,293 @@ export const translations: Record<string, Record<Lang, string>> = {
     VIE: "Hoàn thành trình diễn bài hát sáng tạo 및 댄스 커버 퍼포먼스 무대 성공적 수료",
     IDN: "Menyelesaikan presentasi lagu kreatif orisinal dan panggung pertunjukan cover tari"
   }
+,
+  tabCreative: {
+    KOR: "AI 창작 스튜디오",
+    ENG: "AI Creative Studio",
+    JPN: "AIクリエイティブスタジオ",
+    CHN: "AI创意工作室",
+    VIE: "Phòng sáng tạo AI",
+    IDN: "Studio Kreatif AI"
+  },
+  studioTitle: {
+    KOR: "AI K-Pop 창작 스튜디오",
+    ENG: "AI K-Pop Creative Studio",
+    JPN: "AI K-Pop クリエイティブスタジオ",
+    CHN: "AI K-Pop 创意工作室",
+    VIE: "Phòng sáng tạo AI K-Pop",
+    IDN: "Studio Kreatif AI K-Pop"
+  },
+  lyricistTitle: {
+    KOR: "AI Lyricist (AI 작사)",
+    ENG: "AI Lyricist",
+    JPN: "AI Lyricist (AI作詞)",
+    CHN: "AI Lyricist (AI作词)",
+    VIE: "AI Lyricist (Tự viết lời)",
+    IDN: "AI Lyricist (Penulisan Lirik)"
+  },
+  composerTitle: {
+    KOR: "AI Composer (AI 작곡)",
+    ENG: "AI Composer",
+    JPN: "AI Composer (AI作曲)",
+    CHN: "AI Composer (AI作曲)",
+    VIE: "AI Composer (Tự soạn nhạc)",
+    IDN: "AI Composer (Komposisi)"
+  },
+  themeLabel: {
+    KOR: "작사 주제 선택",
+    ENG: "Select Lyrics Theme",
+    JPN: "作詞テーマ選択",
+    CHN: "选择歌词主题",
+    VIE: "Chọn chủ đề viết lời",
+    IDN: "Pilih Tema Lirik"
+  },
+  promptLabel: {
+    KOR: "스토리 및 성찰 프롬프트",
+    ENG: "Story & Reflection Prompt",
+    JPN: "ストーリー＆省察プロンプト",
+    CHN: "故事与省察提示词",
+    VIE: "Gợi ý câu chuyện & suy ngẫm",
+    IDN: "Perintah Kisah & Refleksi"
+  },
+  promptPlaceholder: {
+    KOR: "이곳에 영어 작사의 모태가 될 인문학적 성찰이나 나만의 감정/이야기를 적어보세요. (한글 또는 영어)",
+    ENG: "Write your humanities reflection or personal story here (KOR/ENG) to generate lyrics.",
+    JPN: "ここに英語作詞のベースとなる人文学적 성찰이나 나만의 감정/이야기를 적어보세요. (한국어 또는 영어)",
+    CHN: "请在此输入作为英文歌词蓝本的人文感悟或您的个人经历/情感（中英韩均可）。",
+    VIE: "Viết suy ngẫm nhân văn hoặc câu chuyện cá nhân của bạn vào đây (KOR/ENG) để tạo lời bài hát.",
+    IDN: "Tulis refleksi humaniora atau kisah pribadi Anda di sini (KOR/ENG) untuk menghasilkan lirik."
+  },
+  btnGenerateLyrics: {
+    KOR: "AI 영어 가사 생성",
+    ENG: "Generate AI Lyrics",
+    JPN: "AI英語歌詞生成",
+    CHN: "生成 AI 英文歌词",
+    VIE: "Tạo lời bài hát bằng AI",
+    IDN: "Hasilkan Lirik AI"
+  },
+  lyricsDisplayLabel: {
+    KOR: "생성된 영문 가사 (직접 수정 가능)",
+    ENG: "Generated English Lyrics (Editable)",
+    JPN: "生成された英語歌詞（直接修正可能）",
+    CHN: "生成的英文歌词（可直接修改）",
+    VIE: "Lời bài hát tiếng Anh được tạo (Có thể chỉnh sửa)",
+    IDN: "Lirik Bahasa Inggris yang Dihasilkan (Dapat Diedit)"
+  },
+  composerTitleInput: {
+    KOR: "곡 제목 입력",
+    ENG: "Song Title",
+    JPN: "曲タイトル入力",
+    CHN: "输入歌曲名称",
+    VIE: "Nhập tiêu đề bài hát",
+    IDN: "Masukkan Judul Lagu"
+  },
+  composerTitlePlaceholder: {
+    KOR: "창작곡의 제목을 입력하세요",
+    ENG: "Enter song title...",
+    JPN: "曲のタイトルを入力してください",
+    CHN: "请输入歌曲名称",
+    VIE: "Nhập tiêu đề...",
+    IDN: "Masukkan judul lagu..."
+  },
+  styleLabel: {
+    KOR: "음악 장르/스타일 선택",
+    ENG: "Select Music Genre/Style",
+    JPN: "音楽ジャンル/スタイル選択",
+    CHN: "选择音乐流派/风格",
+    VIE: "Chọn thể loại/phong cách nhạc",
+    IDN: "Pilih Genre/Gaya Musik"
+  },
+  tempoLabel: {
+    KOR: "템포(Tempo) 설정",
+    ENG: "Tempo",
+    JPN: "テンポ設定",
+    CHN: "设定节奏 (Tempo)",
+    VIE: "Cài đặt nhịp độ (Tempo)",
+    IDN: "Pengaturan Tempo"
+  },
+  vocalLabel: {
+    KOR: "보컬 스타일",
+    ENG: "Vocal Style",
+    JPN: "ボーカルスタイル",
+    CHN: "人声风格",
+    VIE: "Phong cách giọng hát",
+    IDN: "Gaya Vokal"
+  },
+  vocalOptionWithVocal: {
+    KOR: "가창곡 (Vocal)",
+    ENG: "With Vocal",
+    JPN: "歌唱曲 (Vocal)",
+    CHN: "带人声歌曲 (Vocal)",
+    VIE: "Có giọng hát (Vocal)",
+    IDN: "Dengan Vokal (Vocal)"
+  },
+  vocalOptionInst: {
+    KOR: "반주곡 (Instrumental)",
+    ENG: "Instrumental",
+    JPN: "伴奏曲 (Instrumental)",
+    CHN: "伴奏纯音乐 (Instrumental)",
+    VIE: "Nhạc đệm (Instrumental)",
+    IDN: "Instrumental (Inst)"
+  },
+  btnGenerateMusic: {
+    KOR: "SUNO AI 음원 생성",
+    ENG: "Generate Song (SUNO AI)",
+    JPN: "SUNO AI音源生成",
+    CHN: "通过 SUNO AI 生成歌曲",
+    VIE: "Tạo nhạc bằng SUNO AI",
+    IDN: "Hasilkan Lagu SUNO AI"
+  },
+  loadingSunoQueue: {
+    KOR: "SUNO 클러스터 대기 중...",
+    ENG: "Queueing on SUNO cluster...",
+    JPN: "SUNOクラスター待機中...",
+    CHN: "正在 SUNO 集群中排队...",
+    VIE: "Đang xếp hàng trên cụm SUNO...",
+    IDN: "Mengantre di kluster SUNO..."
+  },
+  loadingSunoVocal: {
+    KOR: "AI 목소리 스타일 합성 중...",
+    ENG: "Synthesizing vocal tracks...",
+    JPN: "AI音声スタイル合成中...",
+    CHN: "正在合成 AI 人声音轨...",
+    VIE: "Đang tổng hợp giọng hát AI...",
+    IDN: "Mensintesis trek vokal AI..."
+  },
+  loadingSunoMix: {
+    KOR: "악기 반주 믹싱 및 마스터링 중...",
+    ENG: "Mixing and mastering tracks...",
+    JPN: "楽器伴奏ミキシング＆マスタリング中...",
+    CHN: "正在进行伴奏混音与母带处理...",
+    VIE: "Đang trộn và xử lý âm thanh...",
+    IDN: "Mencampur dan menguasai trek..."
+  },
+  loadingSunoReady: {
+    KOR: "음원 생성 완료!",
+    ENG: "Generation Complete!",
+    JPN: "音源生成完了！",
+    CHN: "歌曲生成成功！",
+    VIE: "Tạo nhạc hoàn tất!",
+    IDN: "Pembuatan Lagu Selesai!"
+  },
+  btnRegisterDeliverable: {
+    KOR: "공식 캠프 산출물로 등록",
+    ENG: "Register as Camp Deliverable",
+    JPN: "公式キャンプ産出物に登録",
+    CHN: "注册为官方结业作品",
+    VIE: "Đăng ký làm sản phẩm chính thức của trại",
+    IDN: "Daftar sebagai Hasil Kamp Resmi"
+  },
+  registeredDeliverablesTitle: {
+    KOR: "나의 창작 산출물 목록",
+    ENG: "My Registered Creations",
+    JPN: "私の創作産出物リスト",
+    CHN: "我的原创作品列表",
+    VIE: "Danh sách sản phẩm sáng tạo của tôi",
+    IDN: "Daftar Kreasi Terdaftar Saya"
+  },
+  registeredColTitle: {
+    KOR: "곡 제목",
+    ENG: "Title",
+    JPN: "曲タイトル",
+    CHN: "歌名",
+    VIE: "Tên bài hát",
+    IDN: "Judul"
+  },
+  registeredColGenre: {
+    KOR: "장르",
+    ENG: "Genre",
+    JPN: "ジャンル",
+    CHN: "流派",
+    VIE: "Thể loại",
+    IDN: "Genre"
+  },
+  registeredColLyrics: {
+    KOR: "가사 요약",
+    ENG: "Lyrics Preview",
+    JPN: "歌詞要約",
+    CHN: "歌词预览",
+    VIE: "Xem trước lời",
+    IDN: "Pratinjau Lirik"
+  },
+  registeredColStatus: {
+    KOR: "상태",
+    ENG: "Status",
+    JPN: "状態",
+    CHN: "状态",
+    VIE: "Trạng thái",
+    IDN: "Status"
+  },
+  registeredColActions: {
+    KOR: "작업",
+    ENG: "Actions",
+    JPN: "アクション",
+    CHN: "操作",
+    VIE: "Thao tác",
+    IDN: "Tindakan"
+  },
+  registeredStatusSynced: {
+    KOR: "포트폴리오 연동됨",
+    ENG: "Synced to Portfolio",
+    JPN: "ポートフォリオ連動済み",
+    CHN: "已同步至作品集",
+    VIE: "Đã đồng bộ hồ sơ",
+    IDN: "Terkoneksi ke Portofolio"
+  },
+  toastLyricsSuccess: {
+    KOR: "AI가 성찰을 기반으로 아름다운 가사를 빌드했습니다!",
+    ENG: "AI successfully built lyrics based on your reflection!",
+    JPN: "AI가 OS에 기반해 아름다운歌詞を作成しました！",
+    CHN: "AI 已根据您的感悟成功编写了优美的歌词！",
+    VIE: "AI đã tạo lời bài hát tuyệt đẹp dựa trên suy ngẫm của bạn!",
+    IDN: "AI berhasil membuat lirik berdasarkan refleksi Anda!"
+  },
+  toastMusicSuccess: {
+    KOR: "SUNO AI가 K-Pop 트랙을 성공적으로 빌드했습니다!",
+    ENG: "SUNO AI successfully generated the K-Pop track!",
+    JPN: "SUNO AIがK-Popトラックを正常に作成しました！",
+    CHN: "SUNO AI 已成功生成专属 K-Pop 音轨！",
+    VIE: "SUNO AI đã tạo thành công bản nhạc K-Pop!",
+    IDN: "SUNO AI berhasil menghasilkan trek K-Pop!"
+  },
+  toastRegisterSuccess: {
+    KOR: "창작 산출물이 데뷔 포트폴리오에 성공적으로 등록되었습니다!",
+    ENG: "Creations successfully registered in your debut portfolio!",
+    JPN: "創作産出物がデビューポートフォリオに正常に登録されました！",
+    CHN: "原创作品已成功注册并同步至您的出道作品集中！",
+    VIE: "Sản phẩm sáng tạo đã được đăng ký thành công vào hồ sơ ra mắt của bạn!",
+    IDN: "Hasil kreasi berhasil terdaftar di portofolio debut Anda!"
+  },
+  portfolioCreationsSection: {
+    KOR: "🎵 나의 오리지널 창작곡 산출물",
+    ENG: "🎵 My Original AI Creative Songs",
+    JPN: "🎵 私のオリジナル創作曲産出物",
+    CHN: "🎵 我的原创 AI 歌曲作品",
+    VIE: "🎵 Sản phẩm bài hát gốc AI của tôi",
+    IDN: "🎵 Lagu Kreasi AI Orisinal Saya"
+  },
+  portfolioCreationsDesc: {
+    KOR: "AI 창작 스튜디오에서 트레이니가 직접 기획하고 생성한 오리지널 K-Pop 산출물입니다.",
+    ENG: "Original K-Pop outputs created and generated by the trainee in the AI Creative Studio.",
+    JPN: "AIクリエイティブスタジオで研修生が直接企画し生成したオリジナルK-Popの産出物です。",
+    CHN: "由营员在 AI 创意工作室中自主策划并生成的原创 K-Pop 作品成果。",
+    VIE: "Các sản phẩm K-Pop gốc do học viên tự thiết kế và tạo trong Phòng sáng tạo AI.",
+    IDN: "Karya K-Pop orisinal yang dibuat dan dihasilkan oleh trainee di Studio Kreatif AI."
+  },
+  portfolioNoCreations: {
+    KOR: "아직 등록된 창작 음원이 없습니다. AI 창작 스튜디오에서 첫 번째 K-Pop 곡을 빌드해보세요!",
+    ENG: "No registered songs yet. Build your first K-Pop song in the AI Creative Studio tab!",
+    JPN: "まだ登録された創作音源がありません。AIクリエイティブスタジオで最初のK-Pop曲を作成してみましょう！",
+    CHN: "暂无已注册的原创歌曲。快去 AI 创意工作室打造您的首支 K-Pop 音乐吧！",
+    VIE: "Chưa có nhạc sáng tạo nào được đăng ký. Hãy tạo bài hát K-Pop đầu tiên của bạn trong Phòng sáng tạo AI!",
+    IDN: "Belum ada lagu kreasi yang terdaftar. Buat lagu K-Pop pertama Anda di tab Studio Kreatif AI!"
+  },
+  portfolioGoToCreative: {
+    KOR: "AI 창작 스튜디오로 이동",
+    ENG: "Go to Creative Studio",
+    JPN: "AIクリエイティブスタジオへ移動",
+    CHN: "前往 AI 创意工作室",
+    VIE: "Đến Phòng sáng tạo AI",
+    IDN: "Ke Studio Kreatif AI"
+  }
 };

@@ -31,12 +31,13 @@ import {
   ChevronDown,
   Layers,
   Star,
-  Activity
+  Activity,
+  Music
 } from "lucide-react";
 
 export default function ClientLMSDashboard() {
   // --- States ---
-  const [activeTab, setActiveTab] = useState<"training" | "ai" | "curriculum" | "network" | "portfolio">("curriculum");
+  const [activeTab, setActiveTab] = useState<"training" | "ai" | "curriculum" | "network" | "portfolio" | "creative">("curriculum");
   const [lang, setLang] = useState<Lang>("KOR");
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   
@@ -136,6 +137,51 @@ export default function ClientLMSDashboard() {
   const [isRadarAnimated, setIsRadarAnimated] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState<number | null>(null);
 
+  // 5. [탭 5 - AI 창작 스튜디오]
+  const [storyTheme, setStoryTheme] = useState("identity");
+  const [storyPrompt, setStoryPrompt] = useState("");
+  const [generatedLyrics, setGeneratedLyrics] = useState("");
+  const [isLyricsGenerating, setIsLyricsGenerating] = useState(false);
+  const [musicGenre, setMusicGenre] = useState("synthpop");
+  const [musicTempo, setMusicTempo] = useState("medium");
+  const [musicTitle, setMusicTitle] = useState("");
+  const [musicVocal, setMusicVocal] = useState(true);
+  const [musicGenStatus, setMusicGenStatus] = useState<"idle" | "queue" | "vocal" | "mix" | "ready">("idle");
+  const [currentTrack, setCurrentTrack] = useState<any>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [playTime, setPlayTime] = useState(0);
+  const [registeredSongs, setRegisteredSongs] = useState([
+    {
+      id: "seed-1",
+      title: "My True Identity",
+      genre: "Synthpop",
+      tempo: "Medium",
+      lyrics: "[Verse 1]\nWho am I in the shadows of the crowd?\nTrying to speak, but my voice isn't loud.\n[Chorus]\nBut I find my sound, I rise off the ground\nIn the K-pop beat, my truth is found!",
+      vocal: true,
+      audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      duration: "2:15",
+      durationSeconds: 135,
+      registeredAt: "2026-06-09"
+    }
+  ]);
+
+  // Audio Play Simulation Effect
+  useEffect(() => {
+    let interval: any;
+    if (isPlaying && currentTrack) {
+      interval = setInterval(() => {
+        setPlayTime((prev) => {
+          if (prev >= currentTrack.durationSeconds) {
+            setIsPlaying(false);
+            return 0;
+          }
+          return prev + 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying, currentTrack]);
+
   // --- Effects ---
   useEffect(() => {
     // 탭 4 활성화 또는 마운트 시 SVG 레이더 스트레칭 활성화
@@ -151,6 +197,99 @@ export default function ClientLMSDashboard() {
     setTimeline(prev =>
       prev.map(item => (item.id === id ? { ...item, completed: !item.completed } : item))
     );
+  };
+
+  // --- AI Creative Studio Action Handlers ---
+  const handleGenerateLyrics = () => {
+    setIsLyricsGenerating(true);
+    setTimeout(() => {
+      let lyricsTemplate = "";
+      if (storyTheme === "identity") {
+        lyricsTemplate = `[Verse 1]\nI look in the mirror, searching for a sign\nWho am I behind the design?\nWhispers in the dark, echoes in my head\nFollowing the path that others led.\n\n[Chorus]\nBut I'm breaking the mold, finding my way\nNo longer listening to what they say\nThis is my song, my skin, my soul\nTaking back my own control!`;
+      } else if (storyTheme === "voice") {
+        lyricsTemplate = `[Verse 1]\nSilicon screens and artificial sound\nCan you hear the heartbeat underground?\nIn a world of echoes, singing out loud\nStanding out in a digital crowd.\n\n[Chorus]\nThis is my voice, it's real and raw\nThe truest sound that you ever saw\nNo algorithm can copy my heart\nThis is where my story starts!`;
+      } else if (storyTheme === "self-love") {
+        lyricsTemplate = `[Verse 1]\nGiving my all till there's nothing left inside\nRunning away from the tears I hide\nDrawing a line, finding my peace\nWatching the weight of the worries cease.\n\n[Chorus]\nI'm loving myself, that's not a crime\nSetting my boundaries one step at a time\nHealing the scars, learning to shine\nKnowing this life is truly mine!`;
+      } else {
+        lyricsTemplate = `[Verse 1]\nSeparate worlds, drifting apart\nLooking for a spark in the dark\nReaching out a hand, finding a friend\nKnowing our journey is not at the end.\n\n[Chorus]\nTogether we rise, stronger than one\nUnder the light of a new rising sun\nHands held high, matching our beat\nNothing can stop us when we meet!`;
+      }
+
+      setGeneratedLyrics(lyricsTemplate);
+      setIsLyricsGenerating(false);
+      setToastMessage(t("toastLyricsSuccess"));
+      setTimeout(() => setToastMessage(null), 3000);
+    }, 1500);
+  };
+
+  const handleGenerateMusic = () => {
+    setMusicGenStatus("queue");
+    
+    // Stage 1 -> Stage 2 (Queue to Vocal)
+    setTimeout(() => {
+      setMusicGenStatus("vocal");
+      
+      // Stage 2 -> Stage 3 (Vocal to Mix)
+      setTimeout(() => {
+        setMusicGenStatus("mix");
+        
+        // Stage 3 -> Stage 4 (Mix to Ready)
+        setTimeout(() => {
+          setMusicGenStatus("ready");
+          
+          // Ready -> Complete Track Creation
+          setTimeout(() => {
+            const finalTitle = musicTitle.trim() || (storyTheme.charAt(0).toUpperCase() + storyTheme.slice(1) + " Song");
+            const durationSeconds = musicGenre === "ballad" ? 180 : 135;
+            const durationStr = musicGenre === "ballad" ? "3:00" : "2:15";
+            
+            // Mock dynamic audio helix links to have actual working audio plays
+            let audioLink = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3";
+            if (musicGenre === "r&b") audioLink = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3";
+            if (musicGenre === "bass") audioLink = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3";
+            if (musicGenre === "ballad") audioLink = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3";
+            
+            const newTrack = {
+              id: "track-" + Date.now(),
+              title: finalTitle,
+              genre: musicGenre.charAt(0).toUpperCase() + musicGenre.slice(1),
+              tempo: musicTempo.charAt(0).toUpperCase() + musicTempo.slice(1),
+              lyrics: generatedLyrics || "[Instrumental Track]",
+              vocal: musicVocal,
+              audioUrl: audioLink,
+              duration: durationStr,
+              durationSeconds,
+              registeredAt: new Date().toISOString().split("T")[0]
+            };
+            
+            setCurrentTrack(newTrack);
+            setPlayTime(0);
+            setIsPlaying(false);
+            setMusicGenStatus("idle");
+            setToastMessage(t("toastMusicSuccess"));
+            setTimeout(() => setToastMessage(null), 3000);
+          }, 1000);
+        }, 1200);
+      }, 1200);
+    }, 1000);
+  };
+
+  const handleRegisterDeliverable = () => {
+    if (!currentTrack) return;
+    
+    // Check if already registered
+    if (registeredSongs.some((s) => s.title === currentTrack.title && s.genre === currentTrack.genre)) {
+      setToastMessage("⚠️ 이미 등록된 곡입니다.");
+      setTimeout(() => setToastMessage(null), 3000);
+      return;
+    }
+
+    setRegisteredSongs((prev) => [currentTrack, ...prev]);
+    setToastMessage(t("toastRegisterSuccess"));
+    setTimeout(() => setToastMessage(null), 3000);
+  };
+
+  const handleDeleteSong = (id: string) => {
+    setRegisteredSongs((prev) => prev.filter((s) => s.id !== id));
   };
 
   const completedCount = timeline.filter(t => t.completed).length;
@@ -487,13 +626,13 @@ export default function ClientLMSDashboard() {
         </div>
       </section>
 
-      {/* --- Trainee Main 5-Tab Navigation (NO-PRINT) --- */}
+      {/* --- Trainee Main 6-Tab Navigation (NO-PRINT) --- */}
       <nav className="no-print max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-7">
-        <div className="bg-slate-900/60 border border-slate-800/80 p-2 rounded-2xl grid grid-cols-2 md:grid-cols-5 gap-3.5 shadow-2xl">
+        <div className="bg-slate-900/60 border border-slate-800/80 p-2 rounded-2xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3.5 shadow-2xl">
           
           <button
             onClick={() => setActiveTab("curriculum")}
-            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 col-span-2 md:col-span-1 shadow-sm border ${
+            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 shadow-sm border ${
               activeTab === "curriculum"
                 ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
                 : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
@@ -513,6 +652,18 @@ export default function ClientLMSDashboard() {
           >
             <Calendar className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "training" ? "text-white" : "text-neon-pink/70 group-hover:text-neon-pink"}`} />
             <span>{t("tabPlanner")}</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("creative")}
+            className={`group py-4 sm:py-5.5 rounded-xl text-sm sm:text-base md:text-lg font-black transition-all duration-300 cursor-pointer flex flex-col sm:flex-row items-center justify-center gap-2.5 shadow-sm border ${
+              activeTab === "creative"
+                ? "bg-gradient-to-r from-neon-pink to-neon-purple text-white border-neon-pink/40 shadow-[0_0_20px_rgba(236,72,153,0.3)] scale-[1.03] -translate-y-0.5"
+                : "bg-slate-950/40 border-slate-800/40 text-slate-400 hover:text-white hover:bg-slate-850/60 hover:border-slate-700/80 hover:-translate-y-0.5 hover:shadow-md"
+            }`}
+          >
+            <Music className={`w-5 h-5 sm:w-5.5 sm:h-5.5 transition-colors duration-300 ${activeTab === "creative" ? "text-white" : "text-neon-pink/70 group-hover:text-neon-pink"}`} />
+            <span>{t("tabCreative")}</span>
           </button>
 
           <button
@@ -1610,6 +1761,412 @@ export default function ClientLMSDashboard() {
           </div>
         )}
 
+        {/* --- [탭 6] AI 창작 스튜디오 --- */}
+        {activeTab === "creative" && (
+          <div className="no-print space-y-8 animate-fade-in text-left">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              
+              {/* Left Column: Generator Workspace (Col-span 2) */}
+              <div className="lg:col-span-2 space-y-8">
+                
+                {/* Step 1: AI Lyricist */}
+                <div className="glassmorphism-card rounded-2xl p-7.5 space-y-6">
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <div className="flex items-center gap-3">
+                      <Sparkles className="w-6 h-6 text-neon-pink animate-float" />
+                      <h3 className="text-lg sm:text-xl font-black text-slate-100">{t("lyricistTitle")}</h3>
+                    </div>
+                    <span className="text-xs bg-neon-pink/10 border border-neon-pink/30 text-neon-pink px-2.5 py-1 rounded-full font-mono font-bold">STEP 01</span>
+                  </div>
+
+                  <div className="space-y-4">
+                    {/* Theme Selector Grid */}
+                    <div className="space-y-2.5">
+                      <label className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-wider block">{t("themeLabel")}</label>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        {[
+                          { id: "identity", label: "Identity", emoji: "👤", color: "from-neon-pink to-neon-purple" },
+                          { id: "voice", label: "Voice", emoji: "🎤", color: "from-neon-cyan to-neon-purple" },
+                          { id: "self-love", label: "Self-Love", emoji: "💖", color: "from-neon-pink to-rose-500" },
+                          { id: "connection", label: "Connection", emoji: "🤝", color: "from-neon-cyan to-blue-500" }
+                        ].map((theme) => (
+                          <button
+                            key={theme.id}
+                            onClick={() => setStoryTheme(theme.id)}
+                            className={`p-3.5 rounded-xl border text-left flex flex-col justify-between gap-3.5 cursor-pointer transition-all duration-300 ${
+                              storyTheme === theme.id
+                                ? `bg-gradient-to-br ${theme.color} border-transparent text-white shadow-[0_0_15px_rgba(236,72,153,0.25)] scale-[1.03]`
+                                : "bg-slate-950/40 border-slate-850 text-slate-400 hover:border-slate-700/60 hover:text-slate-200"
+                            }`}
+                          >
+                            <span className="text-2xl">{theme.emoji}</span>
+                            <span className="text-xs sm:text-sm font-black">{theme.label}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Story Prompt Textarea */}
+                    <div className="space-y-2">
+                      <label className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-wider block">{t("promptLabel")}</label>
+                      <textarea
+                        value={storyPrompt}
+                        onChange={(e) => setStoryPrompt(e.target.value)}
+                        placeholder={t("promptPlaceholder")}
+                        rows={3}
+                        className="w-full bg-slate-950/50 border border-slate-850 rounded-xl p-4 text-xs sm:text-sm text-slate-200 focus:outline-none focus:border-neon-pink transition-all font-semibold leading-relaxed"
+                      />
+                    </div>
+
+                    {/* Generate Button */}
+                    <button
+                      onClick={handleGenerateLyrics}
+                      disabled={isLyricsGenerating}
+                      className="w-full py-3.5 rounded-xl bg-[#181d29] hover:bg-[#11141e] text-neon-pink border border-neon-pink/35 hover:border-neon-pink/75 hover:glow-pink text-xs sm:text-sm font-black flex items-center justify-center gap-2 cursor-pointer transition-all hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isLyricsGenerating ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-neon-pink border-t-transparent rounded-full animate-spin" />
+                          <span>Generating AI Lyrics...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Sparkles className="w-4 h-4" />
+                          <span>{t("btnGenerateLyrics")}</span>
+                        </>
+                      )}
+                    </button>
+
+                    {/* Generated Lyrics Output */}
+                    {generatedLyrics && (
+                      <div className="space-y-2.5 animate-fade-in">
+                        <label className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-wider block">{t("lyricsDisplayLabel")}</label>
+                        <textarea
+                          value={generatedLyrics}
+                          onChange={(e) => setGeneratedLyrics(e.target.value)}
+                          rows={6}
+                          className="w-full bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-xs sm:text-sm font-mono text-neon-pink/90 bg-gradient-to-b from-slate-950 to-slate-900 focus:outline-none focus:border-neon-pink/60 transition-all leading-relaxed"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Step 2: AI Composer */}
+                <div className="glassmorphism-card rounded-2xl p-7.5 space-y-6">
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+                    <div className="flex items-center gap-3">
+                      <Music className="w-6 h-6 text-neon-cyan animate-pulse" />
+                      <h3 className="text-lg sm:text-xl font-black text-slate-100">{t("composerTitle")}</h3>
+                    </div>
+                    <span className="text-xs bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan px-2.5 py-1 rounded-full font-mono font-bold">STEP 02</span>
+                  </div>
+
+                  <div className="space-y-5">
+                    {/* Song Title Input */}
+                    <div className="space-y-2">
+                      <label className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-wider block">{t("composerTitleInput")}</label>
+                      <input
+                        type="text"
+                        value={musicTitle}
+                        onChange={(e) => setMusicTitle(e.target.value)}
+                        placeholder={t("composerTitlePlaceholder")}
+                        className="w-full bg-slate-950/50 border border-slate-850 rounded-xl p-3.5 text-xs sm:text-sm text-slate-200 focus:outline-none focus:border-neon-cyan transition-all font-bold"
+                      />
+                    </div>
+
+                    {/* Genre / Style Select */}
+                    <div className="space-y-2.5">
+                      <label className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-wider block">{t("styleLabel")}</label>
+                      <div className="flex flex-wrap gap-2.5">
+                        {[
+                          { id: "synthpop", label: "Synthpop 🌌" },
+                          { id: "bass", label: "Future Bass 🔊" },
+                          { id: "kpop", label: "K-Pop Dance 🕺" },
+                          { id: "r&b", label: "K-R&B ☕" },
+                          { id: "ballad", label: "Vocal Ballad 🎻" }
+                        ].map((genre) => (
+                          <button
+                            key={genre.id}
+                            onClick={() => setMusicGenre(genre.id)}
+                            className={`px-4.5 py-2 rounded-xl text-xs sm:text-sm font-black border transition-all cursor-pointer ${
+                              musicGenre === genre.id
+                                ? "bg-neon-cyan/15 border-neon-cyan text-neon-cyan shadow-[0_0_12px_rgba(34,211,238,0.2)]"
+                                : "bg-slate-950/40 border-slate-850 text-slate-400 hover:border-slate-700/60 hover:text-slate-200"
+                            }`}
+                          >
+                            {genre.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Tempo and Vocal Option */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      {/* Tempo */}
+                      <div className="space-y-2.5">
+                        <label className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-wider block">{t("tempoLabel")}</label>
+                        <div className="flex gap-2">
+                          {[
+                            { id: "slow", label: "Slow 🐢" },
+                            { id: "medium", label: "Medium 🚶" },
+                            { id: "fast", label: "Fast ⚡" }
+                          ].map((tempo) => (
+                            <button
+                              key={tempo.id}
+                              onClick={() => setMusicTempo(tempo.id)}
+                              className={`flex-1 py-2 rounded-lg text-xs font-black border transition-all cursor-pointer ${
+                                musicTempo === tempo.id
+                                  ? "bg-slate-800 border-slate-700 text-white"
+                                  : "bg-slate-950/40 border-slate-850 text-slate-500 hover:text-slate-350"
+                              }`}
+                            >
+                              {tempo.label}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Vocal style */}
+                      <div className="space-y-2.5">
+                        <label className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-wider block">{t("vocalLabel")}</label>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => setMusicVocal(true)}
+                            className={`flex-1 py-2 rounded-lg text-xs font-black border transition-all cursor-pointer ${
+                              musicVocal
+                                ? "bg-neon-cyan/15 border-neon-cyan/40 text-neon-cyan"
+                                : "bg-slate-950/40 border-slate-850 text-slate-500"
+                            }`}
+                          >
+                            {t("vocalOptionWithVocal")}
+                          </button>
+                          <button
+                            onClick={() => setMusicVocal(false)}
+                            className={`flex-1 py-2 rounded-lg text-xs font-black border transition-all cursor-pointer ${
+                              !musicVocal
+                                ? "bg-neon-cyan/15 border-neon-cyan/40 text-neon-cyan"
+                                : "bg-slate-950/40 border-slate-850 text-slate-500"
+                            }`}
+                          >
+                            {t("vocalOptionInst")}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Compose Button */}
+                    <button
+                      onClick={handleGenerateMusic}
+                      disabled={musicGenStatus !== "idle"}
+                      className="w-full py-4.5 rounded-xl bg-gradient-to-r from-neon-cyan to-neon-purple hover:glow-cyan text-white text-xs sm:text-sm font-black flex items-center justify-center gap-2 cursor-pointer transition-all hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <Music className="w-4.5 h-4.5" />
+                      <span>{t("btnGenerateMusic")}</span>
+                    </button>
+
+                    {/* SUNO Generation Stage Overlay (if active) */}
+                    {musicGenStatus !== "idle" && (
+                      <div className="bg-slate-950/70 border border-slate-850 rounded-xl p-5 space-y-4 animate-fade-in">
+                        <div className="flex items-center justify-between text-xs sm:text-sm font-black">
+                          <div className="flex items-center gap-2">
+                            <div className="w-3.5 h-3.5 border-2 border-neon-cyan border-t-transparent rounded-full animate-spin" />
+                            <span className="text-neon-cyan uppercase font-mono tracking-wider">
+                              {musicGenStatus === "queue" && t("loadingSunoQueue")}
+                              {musicGenStatus === "vocal" && t("loadingSunoVocal")}
+                              {musicGenStatus === "mix" && t("loadingSunoMix")}
+                              {musicGenStatus === "ready" && t("loadingSunoReady")}
+                            </span>
+                          </div>
+                          <span className="font-mono text-slate-500">
+                            {musicGenStatus === "queue" && "15%"}
+                            {musicGenStatus === "vocal" && "45%"}
+                            {musicGenStatus === "mix" && "80%"}
+                            {musicGenStatus === "ready" && "100%"}
+                          </span>
+                        </div>
+                        <div className="w-full h-1.5 bg-slate-900 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-gradient-to-r from-neon-cyan to-neon-purple transition-all duration-500"
+                            style={{
+                              width:
+                                musicGenStatus === "queue"
+                                  ? "15%"
+                                  : musicGenStatus === "vocal"
+                                  ? "45%"
+                                  : musicGenStatus === "mix"
+                                  ? "80%"
+                                  : "100%"
+                            }}
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Player & Registry (Col-span 1) */}
+              <div className="lg:col-span-1 space-y-8">
+                
+                {/* Audio Player Card */}
+                <div className="glassmorphism-card rounded-2xl p-7.5 space-y-6 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-[30%] h-full bg-gradient-to-l from-neon-cyan/5 to-transparent pointer-events-none -z-10" />
+                  
+                  <h4 className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-widest border-b border-slate-800 pb-3">
+                    NOW GENERATED TRACK
+                  </h4>
+
+                  {currentTrack ? (
+                    <div className="space-y-6 animate-fade-in text-center">
+                      {/* CD Vinyl rotation simulator */}
+                      <div className="flex justify-center">
+                        <div className={`w-36 h-36 rounded-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 border-4 border-slate-800 flex items-center justify-center shadow-xl shadow-black/40 relative ${isPlaying ? 'animate-spin [animation-duration:8s]' : ''}`}>
+                          <div className="w-12 h-12 rounded-full bg-neon-cyan/15 border-2 border-neon-cyan flex items-center justify-center">
+                            <span className="text-xl">🎵</span>
+                          </div>
+                          {/* Grooves */}
+                          <div className="absolute inset-4 rounded-full border border-slate-800/40" />
+                          <div className="absolute inset-8 rounded-full border border-slate-800/25" />
+                          <div className="absolute inset-12 rounded-full border border-slate-800/10" />
+                        </div>
+                      </div>
+
+                      <div className="space-y-1">
+                        <h4 className="text-base sm:text-lg font-black text-slate-100 truncate">{currentTrack.title}</h4>
+                        <p className="text-xs sm:text-sm text-neon-cyan font-bold uppercase tracking-wider">{currentTrack.genre} • {currentTrack.tempo} BPM</p>
+                      </div>
+
+                      {/* Wave Animation Visualizer */}
+                      <div className="flex items-end justify-center gap-1.5 h-10 w-full px-4.5 bg-slate-950/20 py-2.5 rounded-xl border border-slate-900">
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((idx) => {
+                          const heights = [
+                            "h-2", "h-4", "h-7", "h-5", "h-9",
+                            "h-3", "h-8", "h-6", "h-8", "h-3",
+                            "h-9", "h-5", "h-7", "h-4", "h-2"
+                          ];
+                          return (
+                            <div
+                              key={idx}
+                              className={`bg-neon-cyan w-1.5 rounded transition-all duration-300 ${
+                                isPlaying ? heights[(idx + Math.floor(playTime)) % 15] : "h-1.5 bg-slate-700"
+                              }`}
+                            />
+                          );
+                        })}
+                      </div>
+
+                      {/* Custom Audio Controller */}
+                      <div className="space-y-2">
+                        {/* Audio Progress Bar */}
+                        <div className="flex items-center gap-3">
+                          <span className="text-[10px] font-mono text-slate-500">
+                            {Math.floor(playTime / 60)}:{(playTime % 60).toString().padStart(2, '0')}
+                          </span>
+                          <div className="flex-1 h-1.5 bg-slate-800 rounded-full relative overflow-hidden cursor-pointer">
+                            <div
+                              className="h-full bg-neon-cyan transition-all"
+                              style={{ width: `${(playTime / currentTrack.durationSeconds) * 100}%` }}
+                            />
+                          </div>
+                          <span className="text-[10px] font-mono text-slate-500">{currentTrack.duration}</span>
+                        </div>
+
+                        {/* Controls */}
+                        <div className="flex justify-center items-center gap-4">
+                          <button
+                            onClick={() => setIsPlaying(!isPlaying)}
+                            className="w-12 h-12 rounded-full bg-neon-cyan text-slate-950 hover:scale-105 transition-transform flex items-center justify-center cursor-pointer shadow-lg shadow-cyan-950/20 font-black flex items-center justify-center"
+                          >
+                            {isPlaying ? (
+                              <div className="flex gap-1 items-center justify-center">
+                                <div className="w-1.5 h-4 bg-slate-950" />
+                                <div className="w-1.5 h-4 bg-slate-950" />
+                              </div>
+                            ) : (
+                              <Play className="w-5 h-5 fill-slate-950 text-slate-950 ml-1" />
+                            )}
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Registry Button */}
+                      <button
+                        onClick={handleRegisterDeliverable}
+                        className="w-full py-3.5 rounded-xl bg-neon-pink hover:bg-neon-pink/90 text-white text-xs sm:text-sm font-black flex items-center justify-center gap-2 cursor-pointer transition-all hover:scale-[1.01] hover:glow-pink shadow-md"
+                      >
+                        <Award className="w-4 h-4" />
+                        <span>{t("btnRegisterDeliverable")}</span>
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="py-12 text-center text-slate-500 font-semibold text-xs sm:text-sm leading-relaxed border border-dashed border-slate-850 rounded-xl bg-slate-950/10">
+                      💡 {lang === "KOR" ? "먼저 작사·작곡 단계를 완료하고 첫 오리지널 음원을 생성하세요." : "Complete lyrics & composition stages to generate your first track."}
+                    </div>
+                  )}
+                </div>
+
+                {/* Deliverables Registry Table */}
+                <div className="glassmorphism-card rounded-2xl p-7.5 space-y-6">
+                  <h4 className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-widest border-b border-slate-800 pb-3">
+                    {t("registeredDeliverablesTitle")}
+                  </h4>
+
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                      <thead>
+                        <tr className="border-b border-slate-800 text-slate-500 font-extrabold uppercase">
+                          <th className="py-3 px-2">{t("registeredColTitle")}</th>
+                          <th className="py-3 px-2">{t("registeredColGenre")}</th>
+                          <th className="py-3 px-2">{t("registeredColStatus")}</th>
+                          <th className="py-3 px-2 text-right">{t("registeredColActions")}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {registeredSongs.map((song) => (
+                          <tr key={song.id} className="border-b border-slate-900 hover:bg-slate-900/20 transition-colors font-semibold animate-fade-in">
+                            <td className="py-3.5 px-2 text-slate-200 truncate max-w-[120px] font-bold">{song.title}</td>
+                            <td className="py-3.5 px-2 text-slate-400">{song.genre}</td>
+                            <td className="py-3.5 px-2">
+                              <span className="inline-block text-[10px] bg-emerald-500/10 border border-emerald-500/25 text-emerald-450 px-2 py-0.5 rounded-md font-bold">
+                                {t("registeredStatusSynced")}
+                              </span>
+                            </td>
+                            <td className="py-3.5 px-2 text-right">
+                              <div className="flex justify-end items-center gap-2">
+                                <button
+                                  onClick={() => {
+                                    setCurrentTrack(song);
+                                    setPlayTime(0);
+                                    setIsPlaying(true);
+                                  }}
+                                  className="w-7 h-7 rounded-lg bg-slate-950 border border-slate-800 hover:border-neon-cyan flex items-center justify-center cursor-pointer text-neon-cyan hover:glow-cyan transition-all"
+                                >
+                                  <Play className="w-3.5 h-3.5 fill-neon-cyan" />
+                                </button>
+                                {song.id !== "seed-1" && (
+                                  <button
+                                    onClick={() => handleDeleteSong(song.id)}
+                                    className="w-7 h-7 rounded-lg bg-slate-950 border border-slate-800 hover:border-neon-pink flex items-center justify-center cursor-pointer text-neon-pink hover:glow-pink transition-all"
+                                  >
+                                    <X className="w-3.5 h-3.5" />
+                                  </button>
+                                )}
+                              </div>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        )}
+
         {/* --- [탭 3] 글로벌 네트워킹 --- */}
         {activeTab === "network" && (
           <div className="no-print space-y-8 animate-fade-in">
@@ -1974,6 +2531,71 @@ export default function ClientLMSDashboard() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            {/* KISAS Registered Creative Songs Portfolio Section */}
+            <div className="print-card glassmorphism-card rounded-3xl p-7.5 sm:p-10 space-y-6 relative overflow-hidden mt-8">
+              <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
+                <Music className="w-6 h-6 text-neon-pink animate-float" />
+                <h3 className="text-lg sm:text-xl font-black text-slate-100">{t("portfolioCreationsSection")}</h3>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-400 font-bold leading-relaxed">{t("portfolioCreationsDesc")}</p>
+
+              {registeredSongs.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+                  {registeredSongs.map((song) => (
+                    <div
+                      key={song.id}
+                      className="bg-slate-950/40 border border-slate-850 p-5 rounded-2xl hover:border-neon-pink/30 hover:scale-[1.01] transition-all flex items-center justify-between gap-5"
+                    >
+                      <div className="flex items-center gap-3.5 min-w-0">
+                        <div className="w-10 h-10 rounded-xl bg-neon-pink/10 border border-neon-pink/20 flex items-center justify-center shrink-0">
+                          <span className="text-lg">🎵</span>
+                        </div>
+                        <div className="min-w-0 text-left">
+                          <h4 className="text-sm sm:text-base font-black text-slate-200 truncate font-bold">{song.title}</h4>
+                          <p className="text-xs text-slate-400 font-semibold">{song.genre} • {song.tempo} Tempo • {song.duration}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        {currentTrack?.id === song.id && isPlaying ? (
+                          <button
+                            onClick={() => setIsPlaying(false)}
+                            className="w-9 h-9 rounded-xl bg-neon-cyan/15 border border-neon-cyan/40 text-neon-cyan flex items-center justify-center cursor-pointer shadow-md"
+                          >
+                            <div className="flex gap-1 items-center justify-center">
+                              <div className="w-1 h-3 bg-neon-cyan" />
+                              <div className="w-1 h-3 bg-neon-cyan" />
+                            </div>
+                          </button>
+                        ) : (
+                          <button
+                            onClick={() => {
+                              setCurrentTrack(song);
+                              setPlayTime(0);
+                              setIsPlaying(true);
+                            }}
+                            className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-neon-pink text-slate-350 hover:text-neon-pink flex items-center justify-center cursor-pointer hover:glow-pink transition-all"
+                          >
+                            <Play className="w-4 h-4 fill-current ml-0.5" />
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="py-8 text-center text-slate-500 font-semibold text-xs sm:text-sm border border-dashed border-slate-850 rounded-2xl bg-slate-950/10 flex flex-col items-center justify-center gap-3">
+                  <span>{t("portfolioNoCreations")}</span>
+                  <button
+                    onClick={() => setActiveTab("creative")}
+                    className="px-4 py-2 rounded-xl bg-[#181d29] hover:bg-[#11141e] text-neon-pink border border-neon-pink/35 hover:border-neon-pink/75 hover:glow-pink text-xs sm:text-sm font-black transition-all cursor-pointer hover:scale-[1.02]"
+                  >
+                    {t("portfolioGoToCreative")}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         )}
